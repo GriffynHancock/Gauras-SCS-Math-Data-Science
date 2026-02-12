@@ -1,57 +1,47 @@
 [
   {
     "cluster": "misc_articles",
-    "original": "Sharagrahi_Vaishnava.html",
+    "original": "Approaching_the_Infinite.html",
     "status": "processed"
   },
   {
     "cluster": "misc_articles",
-    "original": "The_Line_of_Sri_Rupa.html",
+    "original": "Lord_of_the_Cows.html",
     "status": "processed"
   },
   {
     "cluster": "misc_articles",
-    "original": "_A_Tragedy_of_Separation__.html",
+    "original": ".html",
     "status": "processed"
   },
   {
     "cluster": "indian_lang_pdfs_1.2_libtiff / tiff2pdf -",
-    "original": "KrishnanushilanaSanghaVani_1987.pdf",
-    "status": "ocr_pending"
+    "original": "ShashvataSukhaNiketana_Hindi.pdf",
+    "status": "processed"
   },
   {
     "cluster": "indian_lang_pdfs_1.2_libtiff / tiff2pdf -",
-    "original": "SriBhakti-rasamrita-sindhu.pdf",
-    "status": "ocr_pending"
+    "original": "Rochanamrita.pdf",
+    "status": "processed"
   },
   {
     "cluster": "indian_lang_pdfs_1.2_libtiff / tiff2pdf -",
-    "original": "SriKrishnaKarnamritam_FirstEdition.pdf",
-    "status": "ocr_pending"
-  },
-  {
-    "cluster": "english_epubs",
-    "original": "Sri_Chaitanya_Mahaprabhu_.epub",
+    "original": "KalyanaKalpaTaru.pdf",
     "status": "processed"
   },
   {
     "cluster": "english_epubs",
-    "original": "The_Bhagavat.epub",
+    "original": "The_Divine_Servitor.epub",
     "status": "processed"
   },
   {
     "cluster": "english_epubs",
-    "original": "Revealed_Truth.epub",
+    "original": "Heart_and_Halo.epub",
     "status": "processed"
   },
   {
-    "cluster": "english_pdfs_1.6_Acrobat Distiller 4.",
-    "original": "HomeComfort6thIndianEdition.pdf",
-    "status": "processed"
-  },
-  {
-    "cluster": "english_pdfs_1.6_Acrobat Distiller 4.",
-    "original": "Heart_and_Halo.pdf",
+    "cluster": "english_epubs",
+    "original": "Srimad_Bhagavad-gita.epub",
     "status": "processed"
   },
   {
@@ -60,18 +50,28 @@
     "status": "processed"
   },
   {
-    "cluster": "english_pdfs_1.6_Adobe Acrobat 9.0 Im",
-    "original": "ChaitanyaSaraswati-No1-VoiceOfSriChaitanyadev-scans.pdf",
+    "cluster": "english_pdfs_1.6_Acrobat Distiller 4.",
+    "original": "SubjectiveEvolution-1998.pdf",
+    "status": "processed"
+  },
+  {
+    "cluster": "english_pdfs_1.6_Acrobat Distiller 4.",
+    "original": "GitaHiddenTreasure-2ndEdition.pdf",
     "status": "processed"
   },
   {
     "cluster": "english_pdfs_1.6_Adobe Acrobat 9.0 Im",
-    "original": "DignityOfTheDivineServitor-scans.pdf",
-    "status": "processed"
+    "original": "ChaitanyaSaraswati-No1-VoiceOfSriChaitanyadev-scans.pdf",
+    "status": "warning_low_content"
   },
   {
     "cluster": "english_pdfs_1.6_Adobe Acrobat 9.0 Im",
     "original": "BrahmaSamhita-Quintessence_scans.pdf",
+    "status": "processed"
+  },
+  {
+    "cluster": "english_pdfs_1.6_Adobe Acrobat 9.0 Im",
+    "original": "GuardianOfDevotion-DumDumPark1986-BlueCover.pdf",
     "status": "processed"
   }
 ]

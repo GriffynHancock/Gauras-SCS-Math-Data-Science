@@ -1,7 +1,11 @@
 import json
-import random
 from pathlib import Path
 import re
+import PyPDF2
+from ebooklib import epub
+from bs4 import BeautifulSoup
+from pdf2image import convert_from_path
+import pytesseract
 from sanitise_english import EnglishSanitizer
 
 class GroupSanitizer:
@@ -12,71 +16,94 @@ class GroupSanitizer:
         self.output_dir = Path('mini_dataset')
         self.output_dir.mkdir(exist_ok=True)
 
-    def get_top_clusters(self, n=5):
-        clusters = self.report['clusters']
-        # Sort by number of files in cluster
-        sorted_clusters = sorted(clusters.items(), key=lambda x: len(x[1]), reverse=True)
-        return sorted_clusters[:n]
+    def extract_epub(self, file_path):
+        try:
+            book = epub.read_epub(str(file_path))
+            text = ""
+            for item in book.get_items():
+                if item.get_type() == 9: # DOCUMENT
+                    soup = BeautifulSoup(item.get_content(), 'html.parser')
+                    text += soup.get_text() + "\n"
+            return text
+        except:
+            return ""
+
+    def extract_ocr(self, file_path, lang='ben+eng'):
+        try:
+            # Shift range to pages 5-7 to get actual content
+            images = convert_from_path(file_path, first_page=5, last_page=7, dpi=200)
+            text = ""
+            for img in images:
+                text += pytesseract.image_to_string(img, lang=lang) + "\n"
+            return text
+        except Exception as e:
+            return f"OCR_ERROR: {e}"
+
+    def extract_html(self, file_path):
+        try:
+            content = file_path.read_text(encoding='utf-8', errors='ignore')
+            soup = BeautifulSoup(content, 'html.parser')
+            # Strip scripts/styles
+            for s in soup(["script", "style"]):
+                s.extract()
+            return soup.get_text()
+        except:
+            return ""
 
     def process_mini_dataset(self):
-        top_clusters = self.get_top_clusters()
-        print(f"🏗️ Generating Mini-Dataset from top {len(top_clusters)} clusters...")
-        
         dataset_summary = []
+        top_clusters = sorted(self.report['clusters'].items(), key=lambda x: len(x[1]), reverse=True)[:5]
         
         for cluster_id, filenames in top_clusters:
-            print(f"  📂 Processing Cluster: {cluster_id} ({len(filenames)} files)")
-            # Sample 3
-            samples = random.sample(filenames, min(3, len(filenames)))
+            print(f"📂 Cluster: {cluster_id}")
+            # Use deterministic sampling for the test
+            samples = filenames[:3] 
             
             for fname in samples:
-                # Find file info in report
-                file_info = next(f for f in self.report['files'] if f['filename'] == fname)
-                file_path = Path(file_info['path'])
+                f_info = next(f for f in self.report['files'] if f['filename'] == fname)
+                file_path = Path(f_info['path'])
                 
-                if not file_path.exists(): continue
+                print(f"  🧼 Processing {fname}...")
+                raw_text = ""
                 
-                print(f"    🧼 Sanitising {fname}...")
-                
-                # Logic: If PDF and not Indian, use English Sanitizer
-                # If Indian PDF, we'd need OCR (Skipping for now or just reporting)
-                # If EPUB, use basic cleaning
-                
-                sanitised_text = ""
-                status = "processed"
-                
+                # BRANCHING LOGIC
                 if 'indian_lang' in cluster_id:
-                    status = "ocr_pending"
-                    sanitised_text = "[OCR REQUIRED FOR INDIAN LANGUAGE PDF]"
-                elif 'pdf' in file_info['mime']:
+                    raw_text = self.extract_ocr(file_path, lang='ben+eng')
+                elif 'pdf' in f_info['mime']:
                     try:
-                        import PyPDF2
                         with open(file_path, 'rb') as f:
                             reader = PyPDF2.PdfReader(f)
-                            raw_text = ""
-                            # Only first 50 pages for the mini-dataset to keep it fast
-                            for p in reader.pages[:50]:
-                                raw_text += p.extract_text() + "\n"
-                            sanitised_text = self.english_sanitizer.sanitise(raw_text)
-                    except Exception as e:
-                        status = f"error: {e}"
-                elif 'epub' in file_info['mime'] or 'zip' in file_info['mime']:
-                    sanitised_text = "[EPUB SANITISATION LOGIC PENDING]" # To be implemented
+                            for p in reader.pages[:30]:
+                                raw_text += p.extract_text() or ""
+                    except:
+                        pass
+                    
+                    if len(raw_text.strip()) < 100:
+                        print(f"    📸 Detect scan, running OCR for {fname}...")
+                        raw_text = self.extract_ocr(file_path, lang='eng')
+                elif 'epub' in f_info['mime'] or 'zip' in f_info['mime']:
+                    raw_text = self.extract_epub(file_path)
+                elif 'html' in f_info['mime'] or 'text' in f_info['mime']:
+                    raw_text = self.extract_html(file_path)
                 
-                # Save to dataset
+                clean_text = self.english_sanitizer.sanitise(raw_text)
+                
+                # SAVE
                 dest_path = self.output_dir / f"{fname}.txt"
-                dest_path.write_text(sanitised_text, encoding='utf-8')
+                dest_path.write_text(clean_text, encoding='utf-8')
+                
+                word_count = len(clean_text.split())
+                print(f"    ✅ Saved {word_count} words.")
                 
                 dataset_summary.append({
                     'cluster': cluster_id,
                     'original': fname,
-                    'status': status
+                    'status': 'processed' if word_count > 50 else 'warning_low_content'
                 })
                 
         with open('mini_dataset_report.json', 'w') as f:
             json.dump(dataset_summary, f, indent=2)
-        print(f"\n✅ Mini-dataset generated in {self.output_dir}/")
 
 if __name__ == "__main__":
-    sanitiser = GroupSanitizer()
-    sanitiser.process_mini_dataset()
+    gs = GroupSanitizer()
+    gs.process_mini_dataset()
