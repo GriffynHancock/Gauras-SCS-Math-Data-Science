@@ -1,0 +1,58 @@
+{
+  "clusters": [
+    {
+      "id": 0,
+      "top_words": [
+        "world",
+        "srila",
+        "plane",
+        "life",
+        "soul",
+        "home",
+        "come",
+        "centre",
+        "shall",
+        "absolute"
+      ],
+      "files": [
+        "HomeComfort6thIndianEdition.pdf.txt"
+      ]
+    },
+    {
+      "id": 1,
+      "top_words": [
+        "halo",
+        "world",
+        "s\u00e5\u00edkhya",
+        "life",
+        "lord",
+        "heart",
+        "srila",
+        "krishna",
+        "love",
+        "child"
+      ],
+      "files": [
+        "Heart_and_Halo.pdf.txt"
+      ]
+    },
+    {
+      "id": 2,
+      "top_words": [
+        "krishna",
+        "come",
+        "srikrishna",
+        "hesearch",
+        "consciousness",
+        "love",
+        "rasa",
+        "world",
+        "beauty",
+        "sacrifice"
+      ],
+      "files": [
+        "Search_for_Sri_Krishna.pdf.txt"
+      ]
+    }
+  ]
+}

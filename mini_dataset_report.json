@@ -1,0 +1,77 @@
+[
+  {
+    "cluster": "misc_articles",
+    "original": "Sharagrahi_Vaishnava.html",
+    "status": "processed"
+  },
+  {
+    "cluster": "misc_articles",
+    "original": "The_Line_of_Sri_Rupa.html",
+    "status": "processed"
+  },
+  {
+    "cluster": "misc_articles",
+    "original": "_A_Tragedy_of_Separation__.html",
+    "status": "processed"
+  },
+  {
+    "cluster": "indian_lang_pdfs_1.2_libtiff / tiff2pdf -",
+    "original": "KrishnanushilanaSanghaVani_1987.pdf",
+    "status": "ocr_pending"
+  },
+  {
+    "cluster": "indian_lang_pdfs_1.2_libtiff / tiff2pdf -",
+    "original": "SriBhakti-rasamrita-sindhu.pdf",
+    "status": "ocr_pending"
+  },
+  {
+    "cluster": "indian_lang_pdfs_1.2_libtiff / tiff2pdf -",
+    "original": "SriKrishnaKarnamritam_FirstEdition.pdf",
+    "status": "ocr_pending"
+  },
+  {
+    "cluster": "english_epubs",
+    "original": "Sri_Chaitanya_Mahaprabhu_.epub",
+    "status": "processed"
+  },
+  {
+    "cluster": "english_epubs",
+    "original": "The_Bhagavat.epub",
+    "status": "processed"
+  },
+  {
+    "cluster": "english_epubs",
+    "original": "Revealed_Truth.epub",
+    "status": "processed"
+  },
+  {
+    "cluster": "english_pdfs_1.6_Acrobat Distiller 4.",
+    "original": "HomeComfort6thIndianEdition.pdf",
+    "status": "processed"
+  },
+  {
+    "cluster": "english_pdfs_1.6_Acrobat Distiller 4.",
+    "original": "Heart_and_Halo.pdf",
+    "status": "processed"
+  },
+  {
+    "cluster": "english_pdfs_1.6_Acrobat Distiller 4.",
+    "original": "Search_for_Sri_Krishna.pdf",
+    "status": "processed"
+  },
+  {
+    "cluster": "english_pdfs_1.6_Adobe Acrobat 9.0 Im",
+    "original": "ChaitanyaSaraswati-No1-VoiceOfSriChaitanyadev-scans.pdf",
+    "status": "processed"
+  },
+  {
+    "cluster": "english_pdfs_1.6_Adobe Acrobat 9.0 Im",
+    "original": "DignityOfTheDivineServitor-scans.pdf",
+    "status": "processed"
+  },
+  {
+    "cluster": "english_pdfs_1.6_Adobe Acrobat 9.0 Im",
+    "original": "BrahmaSamhita-Quintessence_scans.pdf",
+    "status": "processed"
+  }
+]
