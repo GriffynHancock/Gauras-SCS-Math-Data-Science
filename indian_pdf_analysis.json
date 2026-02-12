@@ -1,0 +1,23 @@
+{
+  "indian_lang_pdfs_0.pdf": {
+    "has_fonts": false,
+    "page_count": 104,
+    "producer": "libtiff / tiff2pdf - 20120922",
+    "creator": "Unknown",
+    "is_linearized": false
+  },
+  "indian_lang_pdfs_1.pdf": {
+    "has_fonts": false,
+    "page_count": 48,
+    "producer": "libtiff / tiff2pdf - 20120922",
+    "creator": "Unknown",
+    "is_linearized": false
+  },
+  "indian_lang_pdfs_2.pdf": {
+    "has_fonts": false,
+    "page_count": 46,
+    "producer": "libtiff / tiff2pdf - 20110409",
+    "creator": "Unknown",
+    "is_linearized": false
+  }
+}

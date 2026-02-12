@@ -1,0 +1,41 @@
+# Sri Chaitanya Saraswat Math Dataset Creator
+# Python package requirements
+
+# Core dependencies
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# PDF processing
+PyPDF2>=3.0.0
+
+# EPUB processing
+ebooklib>=0.18
+
+# Optional: Advanced PDF processing (if needed)
+# pdfplumber>=0.10.0
+# pymupdf>=1.23.0
+
+# Optional: OCR for scanned PDFs
+# pytesseract>=0.3.10
+# pdf2image>=1.16.0
+
+# Optional: Enhanced text processing
+# nltk>=3.8.0
+# spacy>=3.7.0
+
+# Optional: For LLM fine-tuning
+# transformers>=4.35.0
+# torch>=2.1.0
+# datasets>=2.15.0
+# accelerate>=0.25.0
+
+# Optional: For vector databases (RAG)
+# langchain>=0.1.0
+# chromadb>=0.4.0
+# sentence-transformers>=2.2.0
+
+# Development tools
+# black>=23.0.0
+# flake8>=6.1.0
+# pytest>=7.4.0

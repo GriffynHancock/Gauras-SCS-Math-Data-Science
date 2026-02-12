@@ -1,0 +1,1296 @@
+{
+  "metadata": {
+    "discovery_date": "2026-02-12T15:26:04.766436",
+    "total_sources": 184
+  },
+  "sources": [
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/AffectionateGuidance.pdf",
+      "discovered_at": "2026-02-12T15:26:06.541143"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/Archchan-kana.pdf",
+      "discovered_at": "2026-02-12T15:26:06.541244"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/BenedictineTree.pdf",
+      "discovered_at": "2026-02-12T15:26:06.541311"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/BhagavatDarshan-scans.pdf",
+      "discovered_at": "2026-02-12T15:26:06.541372"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/BrahmaSamhita-Quintessence_scans.pdf",
+      "discovered_at": "2026-02-12T15:26:06.541434"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/Catalog-ALLBooksAndAddresses-May2007.pdf",
+      "discovered_at": "2026-02-12T15:26:06.541492"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/Catalogue2003-SCSMathPublications.pdf",
+      "discovered_at": "2026-02-12T15:26:06.541549"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/Catalogue2007-SCSMathPublications.pdf",
+      "discovered_at": "2026-02-12T15:26:06.541606"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/CentenaryAnthology.pdf",
+      "discovered_at": "2026-02-12T15:26:06.541662"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/ChaitanyaMahaprabhu-HisLifeAndPrecepts.pdf",
+      "discovered_at": "2026-02-12T15:26:06.541718"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/ChaitanyaSaraswati-No1-VoiceOfSriChaitanyadev-scans.pdf",
+      "discovered_at": "2026-02-12T15:26:06.541774"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/ChaitanyaSaraswati-No2-1994_scans.pdf",
+      "discovered_at": "2026-02-12T15:26:06.541832"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/DignityOfTheDivineServitor-scans.pdf",
+      "discovered_at": "2026-02-12T15:26:06.541887"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/DivineAspiration_2006.pdf",
+      "discovered_at": "2026-02-12T15:26:06.541942"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/DivineGuidance-2004.pdf",
+      "discovered_at": "2026-02-12T15:26:06.541998"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/DivineMessageForTheDevotees-1993-scans.pdf",
+      "discovered_at": "2026-02-12T15:26:06.542053"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/ExclusiveGuardianship.pdf",
+      "discovered_at": "2026-02-12T15:26:06.542111"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/GitaHiddenTreasure-2ndEdition.pdf",
+      "discovered_at": "2026-02-12T15:26:06.542364"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/GoldenReflections-scans.pdf",
+      "discovered_at": "2026-02-12T15:26:06.542447"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/GoldenStaircase_1994.pdf",
+      "discovered_at": "2026-02-12T15:26:06.542508"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/GoldenVolcano-2006.pdf",
+      "discovered_at": "2026-02-12T15:26:06.542560"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/GuardianOfDevotion-DumDumPark1986-BlueCover.pdf",
+      "discovered_at": "2026-02-12T15:26:06.542611"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/GuardianOfDevotion-SanJoseEdition-BrownCover.pdf",
+      "discovered_at": "2026-02-12T15:26:06.542671"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/HaridasaThakura_BookletTranslatedByBVijnanBharatiMj-1986-scans.pdf",
+      "discovered_at": "2026-02-12T15:26:06.542721"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/Heart_and_Halo.pdf",
+      "discovered_at": "2026-02-12T15:26:06.542772"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/HolyEngagement.pdf",
+      "discovered_at": "2026-02-12T15:26:06.542821"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/HolyName_GloriesAndOffencesToAvoid6thEd.pdf",
+      "discovered_at": "2026-02-12T15:26:06.542871"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/HomeComfort6thIndianEdition.pdf",
+      "discovered_at": "2026-02-12T15:26:06.542921"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/InnerFulfilment-2004.pdf",
+      "discovered_at": "2026-02-12T15:26:06.542966"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/KirtanGuidePocketEdition-English-2013.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543012"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/KirttanGuide10th_Updated_23_08_03.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543059"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/LandOfNectar-ColouringBook-2007.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543104"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/LovingSearchForThe LostServant-ColourSoftCover.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543149"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/NabadwipDhamMahatmya_and_SriNabadadwipBhavaTaranga-Web2015.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543197"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/HiddenTreasureOfHolyDhamaNabadwipa-NabadwipDhamMahatmya-n-NabadwipBhavataranga-scans.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543244"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/NectareanGloriesOfSriNityanandaPrabhu-120209.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543290"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/Ocean_of_Nectar-2004.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543336"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/OriginalSource2ndEd-2001.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543380"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/Prapanna-Jivanamritam_searchable.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543425"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/Premadhama-deva-stotram.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543481"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/ReligionOfTheHeart-2ndEd.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543526"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/RevealedTruth-WebUpdated-130706.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543570"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/Saranagati-withRunningCorrections-120802.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543615"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/SaraswatStyleManual_1.0.2_120724-FormalRelease.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543660"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/Search_for_Sri_Krishna.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543704"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/Sermons_Vol_1_scans.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543748"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/Sermons_Vol_2_scans.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543790"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/Sermons_Vol_3_1999.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543833"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/Sermons_Vol_4-scans.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543877"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/ServiceLife.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543920"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/SpiritualAssistanceForOurFriends.pdf",
+      "discovered_at": "2026-02-12T15:26:06.543963"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/SriGuruAndHisGrace-4thPrinting-1999.pdf",
+      "discovered_at": "2026-02-12T15:26:06.544017"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/SubjectiveEvolution-1998.pdf",
+      "discovered_at": "2026-02-12T15:26:06.544061"
+    },
+    {
+      "category": "english_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/TheBhagavata-colour.pdf",
+      "discovered_at": "2026-02-12T15:26:06.544111"
+    },
+    {
+      "category": "english_epubs",
+      "type": "epub",
+      "title": "",
+      "url": "https://scsmath.org/publications/epubs/Srimad_Bhagavad-gita.epub",
+      "discovered_at": "2026-02-12T15:26:08.372411"
+    },
+    {
+      "category": "english_epubs",
+      "type": "epub",
+      "title": "",
+      "url": "https://scsmath.org/publications/epubs/Bhagavat_Darshan.epub",
+      "discovered_at": "2026-02-12T15:26:08.372505"
+    },
+    {
+      "category": "english_epubs",
+      "type": "epub",
+      "title": "",
+      "url": "https://scsmath.org/publications/epubs/Golden_Reflections.epub",
+      "discovered_at": "2026-02-12T15:26:08.372574"
+    },
+    {
+      "category": "english_epubs",
+      "type": "epub",
+      "title": "",
+      "url": "https://scsmath.org/publications/epubs/Heart_and_Halo.epub",
+      "discovered_at": "2026-02-12T15:26:08.372642"
+    },
+    {
+      "category": "english_epubs",
+      "type": "epub",
+      "title": "",
+      "url": "https://scsmath.org/publications/epubs/Home_Comfort.epub",
+      "discovered_at": "2026-02-12T15:26:08.372706"
+    },
+    {
+      "category": "english_epubs",
+      "type": "epub",
+      "title": "",
+      "url": "https://scsmath.org/publications/epubs/Inner_Fulfillment.epub",
+      "discovered_at": "2026-02-12T15:26:08.372770"
+    },
+    {
+      "category": "english_epubs",
+      "type": "epub",
+      "title": "",
+      "url": "https://scsmath.org/publications/epubs/Nityananda_Mahimamritam.epub",
+      "discovered_at": "2026-02-12T15:26:08.372832"
+    },
+    {
+      "category": "english_epubs",
+      "type": "epub",
+      "title": "",
+      "url": "https://scsmath.org/publications/epubs/Original_Source.epub",
+      "discovered_at": "2026-02-12T15:26:08.372896"
+    },
+    {
+      "category": "english_epubs",
+      "type": "epub",
+      "title": "",
+      "url": "https://scsmath.org/publications/epubs/Revealed_Truth.epub",
+      "discovered_at": "2026-02-12T15:26:08.372958"
+    },
+    {
+      "category": "english_epubs",
+      "type": "epub",
+      "title": "",
+      "url": "https://scsmath.org/publications/epubs/Sri_Chaitanya_Mahaprabhu_.epub",
+      "discovered_at": "2026-02-12T15:26:08.373020"
+    },
+    {
+      "category": "english_epubs",
+      "type": "epub",
+      "title": "",
+      "url": "https://scsmath.org/publications/epubs/Sri_Guru_and_His_Grace.epub",
+      "discovered_at": "2026-02-12T15:26:08.373082"
+    },
+    {
+      "category": "english_epubs",
+      "type": "epub",
+      "title": "",
+      "url": "https://scsmath.org/publications/epubs/Sri_Sri_Prapanna-jivanamri.epub",
+      "discovered_at": "2026-02-12T15:26:08.373146"
+    },
+    {
+      "category": "english_epubs",
+      "type": "epub",
+      "title": "",
+      "url": "https://scsmath.org/publications/epubs/The_Bhagavat.epub",
+      "discovered_at": "2026-02-12T15:26:08.373208"
+    },
+    {
+      "category": "english_epubs",
+      "type": "epub",
+      "title": "",
+      "url": "https://scsmath.org/publications/epubs/The_Divine_Servitor.epub",
+      "discovered_at": "2026-02-12T15:26:08.373268"
+    },
+    {
+      "category": "english_epubs",
+      "type": "epub",
+      "title": "",
+      "url": "https://scsmath.org/publications/epubs/The_Golden_Volcano_of_Divi.epub",
+      "discovered_at": "2026-02-12T15:26:08.373329"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/AbhinavaPuratasundaraBhagavanGaurasundareraBahnigarbhaVipralambhaLilaraSamahara.pdf",
+      "discovered_at": "2026-02-12T15:26:10.743452"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/AmritaVidya_FirstEdition.pdf",
+      "discovered_at": "2026-02-12T15:26:10.743536"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/AmritaVidya_SecondEdition.pdf",
+      "discovered_at": "2026-02-12T15:26:10.743593"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/ArchanKan_SecondEdition.pdf",
+      "discovered_at": "2026-02-12T15:26:10.743651"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs/BrahmaSamhita-Quintessence_scans.pdf",
+      "discovered_at": "2026-02-12T15:26:10.743699"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/DuravastharaParapareParamaSatyaOSundaraBhagavaneraSangeYogayogeraUpaya.pdf",
+      "discovered_at": "2026-02-12T15:26:10.743742"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/JiveraSvatantrata.pdf",
+      "discovered_at": "2026-02-12T15:26:10.743782"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/KalyanaKalpaTaru.pdf",
+      "discovered_at": "2026-02-12T15:26:10.743823"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/KrishnanushilanaSanghaVani_1987.pdf",
+      "discovered_at": "2026-02-12T15:26:10.743866"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/KrishnanushilanaSanghaVani_1988.pdf",
+      "discovered_at": "2026-02-12T15:26:10.743906"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/ParamarthaDharmaNirnaya.pdf",
+      "discovered_at": "2026-02-12T15:26:10.743946"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/ParamarthaPathaNirdesha.pdf",
+      "discovered_at": "2026-02-12T15:26:10.743984"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/PremamayaAnveshana.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744022"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/RasarajaSriKrishna.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744067"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/Rochanamrita.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744108"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SadhanaPatha.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744146"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SevaMadhuryaMaryada.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744184"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SharanagatiOSriLadhu-chandrika-bhashya.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744224"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/ShashvataSukhaNiketana_Bengali.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744262"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/ShashvataSukhaNiketana_Hindi.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744302"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/ShuddhaBhaktiRatnavali.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744340"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SriBhaktiKalpaVrksha.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744379"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SriBhaktiRaksakDivyaVani_PartFour.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744418"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SriBhakti-rasamrita-sindhu.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744462"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SriChaitanyaBhagavata.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744501"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SriChaitanyaCharitamrita.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744542"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SriGaudiyaGitanjali.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744582"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SriGurudevaOTaraKaruna.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744620"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SriHari-namONamaparadha.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744658"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SriKrishnaKarnamritam_FirstEdition.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744696"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SriKrishnaKarnamritam.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744734"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SriNabadwipaBhavaTaranga.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744772"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SriNamaBhajanaVicharaOPranali.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744809"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SriNamaNamabhasaONamaparadhaVichara.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744848"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SriShikshashtaka.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744886"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SriSriNityanandaMahimamrita.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744924"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SriSriPrapanna-jivanamritam.pdf",
+      "discovered_at": "2026-02-12T15:26:10.744962"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SriSriPrema-dhama-deva-stotram_Hindi.pdf",
+      "discovered_at": "2026-02-12T15:26:10.745000"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SriSriPrema-dhama-deva-stotram_Oriyan.pdf",
+      "discovered_at": "2026-02-12T15:26:10.745038"
+    },
+    {
+      "category": "indian_lang_pdfs",
+      "type": "pdf",
+      "title": "",
+      "url": "https://scsmath.org/publications/pdfs-IndianLanguage/SuvarnaSopan.pdf",
+      "discovered_at": "2026-02-12T15:26:10.745076"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Read about our logo",
+      "url": "https://scsmath.com/docs/logo.html",
+      "discovered_at": "2026-02-12T15:26:13.091544"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Read about our logo",
+      "url": "https://scsmath.com/docs/logo.html",
+      "discovered_at": "2026-02-12T15:26:13.091600"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Wake Up, Sleeping Souls",
+      "url": "https://scsmath.com/docs/articles/acharya_maharaj/1006_wake_up_sleeping_souls/wake_up.html",
+      "discovered_at": "2026-02-12T15:26:13.091629"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "The Most Magnanimous Welfare Workers",
+      "url": "https://scsmath.com/docs/articles/acharya_maharaj/1005_The_Most_Magnanimous_Welfare_Workers.html",
+      "discovered_at": "2026-02-12T15:26:13.091655"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Bound by Affection",
+      "url": "http://scsmath.org/trove2/boundbyaffctn.html",
+      "discovered_at": "2026-02-12T15:26:13.091676"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "The Benedictine Tree of Divine Aspiration - Excerpt: Life's Destination",
+      "url": "https://scsmath.com/docs/benedictine_tree_excerpt.html",
+      "discovered_at": "2026-02-12T15:26:13.091701"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Sri Brahma-samhita Prologue",
+      "url": "https://scsmath.com/docs/BrahmaSamhita-Prologue-BySGovindaM/BrahmaSamhita-Prologue.html",
+      "discovered_at": "2026-02-12T15:26:13.091725"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "The Unlimited, Unconditional Mercy of Nityananda Prabhu",
+      "url": "https://scsmath.com/docs/030215_nityanand_ap.html",
+      "discovered_at": "2026-02-12T15:26:13.091748"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Sri Sri Prapanna Jivanamrtam - Introducing the book",
+      "url": "https://scsmath.com/docs/prapanna_jivnmrtm_about.html",
+      "discovered_at": "2026-02-12T15:26:13.091770"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "\"A Tragedy of Separation,\"",
+      "url": "https://scsmath.com/docs/golden_volc_excrpt-tragedy.html",
+      "discovered_at": "2026-02-12T15:26:13.091792"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Introduction  to The Loving Search For The Lost Servant",
+      "url": "https://scsmath.com/docs/loving_search_excerpt.html",
+      "discovered_at": "2026-02-12T15:26:13.091815"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Two chapters, the Introduction and The Krishna Conception",
+      "url": "https://scsmath.com/docs/search4srikrsna-2chapters.html",
+      "discovered_at": "2026-02-12T15:26:13.091838"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Pranati Dasakam",
+      "url": "https://scsmath.com/docs/PranatiDasakam-080801_jmd/080801-Dasakam.html",
+      "discovered_at": "2026-02-12T15:26:13.091862"
+    },
+    {
+      "category": "misc_articles",
+      "type": "pdf",
+      "title": "A Day at Hapaniya",
+      "url": "https://scsmath.com/docs/articles/ADayAtHapaniya.pdf",
+      "discovered_at": "2026-02-12T15:26:13.091885"
+    },
+    {
+      "category": "misc_articles",
+      "type": "pdf",
+      "title": "Sri Guru-Prasastih",
+      "url": "https://scsmath.com/docs/articles/GuruPrasastih-CenAnth.pdf",
+      "discovered_at": "2026-02-12T15:26:13.091908"
+    },
+    {
+      "category": "misc_articles",
+      "type": "pdf",
+      "title": "THE APPEARANCE OF SRI GAURASUNDAR",
+      "url": "https://scsmath.com/docs/articles/AppearanceOfSriGaurasundar.pdf",
+      "discovered_at": "2026-02-12T15:26:13.091931"
+    },
+    {
+      "category": "misc_articles",
+      "type": "pdf",
+      "title": "In Praise of Srila Narottam Das Thakur",
+      "url": "https://scsmath.com/docs/articles/Narottam_from-AffGdnc.pdf",
+      "discovered_at": "2026-02-12T15:26:13.091952"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "\"Please Give Me Shelter at Your Lotus Feet\"",
+      "url": "https://scsmath.com/docs/articles/061004_SGovM_Shelter-excerpt/061004_SGovM_darshan-excerpt.html",
+      "discovered_at": "2026-02-12T15:26:13.091975"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Srila Bhakti Sundar Govinda Dev-Goswami Maharaj",
+      "url": "https://scsmath.com/docs/articles/920611_SGovM-DisapTalk.html",
+      "discovered_at": "2026-02-12T15:26:13.091998"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "\"Our Conception, Our Principle and Our Bhajan\"",
+      "url": "https://scsmath.com/docs/articles/061010_SGovMj-OurConception/061010_SGovMj-OurConception.html",
+      "discovered_at": "2026-02-12T15:26:13.092021"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Talk by Srila Bhakti Sundar Govinda Dev-Goswami Maharaj",
+      "url": "https://scsmath.com/docs/articles/DurgaPuja-SGovM-0510/DurgaPuja-SGovM-0510.html",
+      "discovered_at": "2026-02-12T15:26:13.092085"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "'The Lotus feet of Gadadhar Pandit are our sole treasure'",
+      "url": "https://scsmath.com/docs/articles/GadadharPandit_dmyntis/Srila Gadadhara Pandit.htm",
+      "discovered_at": "2026-02-12T15:26:13.092115"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "\"We must follow the service mood of Lalitadevi\"",
+      "url": "https://scsmath.com/docs/articles/LalitaAppDay-Dmynti-0509/Page 1 Lalitadevi.htm",
+      "discovered_at": "2026-02-12T15:26:13.092139"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "The Unlimited, Unconditional Mercy of Nityananda Prabhu",
+      "url": "https://scsmath.com/docs/articles/NityanApp-Damyantis-0502/NityanAppPt1-Damyanti-0502.html",
+      "discovered_at": "2026-02-12T15:26:13.092162"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "The Holy Appearance Day of Lord Nrsimhadeva",
+      "url": "https://scsmath.com/docs/articles/NrsmhadevApp-Dmyntis-0505/NrsmhadevApp-p1.htm",
+      "discovered_at": "2026-02-12T15:26:13.092184"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Our Lord's Beloved Power",
+      "url": "https://scsmath.com/docs/articles/Radhastami-AffGdnc-Dmynti0510/Page 1 Radhastami.htm",
+      "discovered_at": "2026-02-12T15:26:13.092208"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Sanatan Goswami and the sweet-rice",
+      "url": "https://scsmath.com/docs/articles/Sanatan_SweetRice/SanatanGoswami.html",
+      "discovered_at": "2026-02-12T15:26:13.092230"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Extract from Divine Guidance, Chapter Two, 'On the Way to Sri Puri-Dham'",
+      "url": "https://scsmath.com/docs/articles/OnTheWayToPuri/onthewaytopuri_1.html",
+      "discovered_at": "2026-02-12T15:26:13.092253"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "The Jewel of the Garland",
+      "url": "https://scsmath.com/docs/articles/SrilaGuruMj_Disapp-Dmynti-0508/JewelInTheGaland-SGuMDis05.html",
+      "discovered_at": "2026-02-12T15:26:13.092275"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "In Glorification of Sri Advaita Acharyya",
+      "url": "https://scsmath.com/docs/articles/0502AppOfAdvaitaAcarya-compiled/AppearanceOfAdvaita.html",
+      "discovered_at": "2026-02-12T15:26:13.092297"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "'Real Initiation - Nurturing the seed of Krishna-prem.'",
+      "url": "https://scsmath.com/docs/articles/Excerpt-GovMj-RealInitiation-1006/Excerpt-GovMj-RealInitiation-1006.html",
+      "discovered_at": "2026-02-12T15:26:13.092320"
+    },
+    {
+      "category": "misc_articles",
+      "type": "pdf",
+      "title": "Srila Guru Maharaj Remembers",
+      "url": "https://scsmath.com/docs/articles/SGuruMRemembers-CenAnth.pdf",
+      "discovered_at": "2026-02-12T15:26:13.092342"
+    },
+    {
+      "category": "misc_articles",
+      "type": "pdf",
+      "title": "Your Most Fortunate Position",
+      "url": "https://scsmath.com/docs/articles/YourMostFortunatePosition.pdf",
+      "discovered_at": "2026-02-12T15:26:13.092364"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Nirjala Ekadasi",
+      "url": "https://scsmath.com/docs/articles/040530_nirjal_ekadasi_imonk/040530_imonk_nirjal.html",
+      "discovered_at": "2026-02-12T15:26:13.092387"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Purusottam, the extra month.",
+      "url": "https://scsmath.com/docs/articles/PurusottamExtraMonth-2010.html",
+      "discovered_at": "2026-02-12T15:26:13.092409"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "A Tragedy of Separation",
+      "url": "https://scsmath.com/docs/articles/080114-TragedyOfSeparation/Tragedy-01.html",
+      "discovered_at": "2026-02-12T15:26:13.092433"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Sowing the seed of our highest benefit",
+      "url": "https://scsmath.com/docs/articles/Bktnd-GadadharDisap_Dmynt0507/Disap_Gadadhar_BtvndTkr1.html",
+      "discovered_at": "2026-02-12T15:26:13.092455"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Focusing on our fortune",
+      "url": "https://scsmath.com/docs/articles/FocusingOnOurFortune.html",
+      "discovered_at": "2026-02-12T15:26:13.092477"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Approaching the Infinite",
+      "url": "https://scsmath.com/docs/articles/ApproachingTheInfinite-0610-Dmnti/Article_Approaching-the-Infinite.htm",
+      "discovered_at": "2026-02-12T15:26:13.092501"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "The Holy Month of Karttik",
+      "url": "https://scsmath.com/docs/articles/karttik-month.html",
+      "discovered_at": "2026-02-12T15:26:13.092523"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "The Line of Sri Rupa",
+      "url": "https://scsmath.com/docs/articles/LineOfSriRupa-Excerpt-Dmnti-0609/LineOfSriRupa-excerpt-Page-1.htm",
+      "discovered_at": "2026-02-12T15:26:13.092548"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Lord of the Cows",
+      "url": "https://scsmath.com/docs/articles/LordOfTheCows/Page1Excerpt-LordOfTheCows.htm",
+      "discovered_at": "2026-02-12T15:26:13.092570"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "A Transcendental Relationship",
+      "url": "https://scsmath.com/docs/guardian_of_dev-sj-exrpt.html",
+      "discovered_at": "2026-02-12T15:26:13.092627"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "The Glory of the Sri Chaitanya Saraswat Math",
+      "url": "https://scsmath.com/docs/srimac-caitanya_sloka.html",
+      "discovered_at": "2026-02-12T15:26:13.092649"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Chapter Seven, \"Intelligently Aware,\"",
+      "url": "https://scsmath.com/docs/sermons3-excrpt_anartha.html",
+      "discovered_at": "2026-02-12T15:26:13.092670"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Srila Guru Maharaj Remembers",
+      "url": "https://scsmath.com/docs/sgurumj-remembers.html",
+      "discovered_at": "2026-02-12T15:26:13.092693"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Universal Conception of Guru",
+      "url": "https://scsmath.com/docs/sggrace_preface.html",
+      "discovered_at": "2026-02-12T15:26:13.092715"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "From Sri Guru and His Grace",
+      "url": "https://scsmath.com/docs/sggrace_to_err_is_human.html",
+      "discovered_at": "2026-02-12T15:26:13.092737"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Sharagrahi Vaishnava",
+      "url": "https://scsmath.com/docs/jiva_soul-by_bktvnod.html",
+      "discovered_at": "2026-02-12T15:26:13.092760"
+    },
+    {
+      "category": "misc_articles",
+      "type": "pdf",
+      "title": "The Advent of Sri Sri Gaurasundar",
+      "url": "https://scsmath.com/docs/articles/AdventOfSriGaurasundar.pdf",
+      "discovered_at": "2026-02-12T15:26:13.092801"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Disappearance letter by Sripad B.B. Avadhut Maharaj",
+      "url": "http://russian.scsmath.org/100409_AvadhutMj_Letter_English.html",
+      "discovered_at": "2026-02-12T15:26:13.092822"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Srila Saraswati Thakur's Disappearance",
+      "url": "https://scsmath.com/docs/articles/041230_SarasTkrDis_GoswMj_.html",
+      "discovered_at": "2026-02-12T15:26:13.092846"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Gain a visa from the Vaikuntha Embassy",
+      "url": "https://scsmath.com/docs/articles/040401_goswamimj_class.html",
+      "discovered_at": "2026-02-12T15:26:13.092868"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "One Master Dog - Spiritual Fidelity and Loyalty,",
+      "url": "https://scsmath.com/docs/dailydarshan_com/040411_OneMasterDog.html",
+      "discovered_at": "2026-02-12T15:26:13.092891"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "First Become a Disciple - Self-Dissipation and Devotion,",
+      "url": "https://scsmath.com/docs/dailydarshan_com/040427_1st_become_disciple.html",
+      "discovered_at": "2026-02-12T15:26:13.092915"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "In glorification of Srila Guru Maharaj",
+      "url": "https://scsmath.com/docs/articles/94_JanardanMj-DisapTalk.html",
+      "discovered_at": "2026-02-12T15:26:13.092938"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Srila Haridas Thakur's Divine Glories",
+      "url": "https://scsmath.com/docs/articles/HaridasTkr-SGovM-BPJ-0509/HaridasTkr-SGovM-BPJ-0509.html",
+      "discovered_at": "2026-02-12T15:26:13.092960"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Srila Govinda Maharaj: His Life and Mission in brief",
+      "url": "https://scsmath.com/docs/articles/SGovMj-HisLifeAndMission.html",
+      "discovered_at": "2026-02-12T15:26:13.092981"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Srila Saraswati Thakur's Appearance",
+      "url": "https://scsmath.com/docs/articles/SaraswatiTkrApp-Damayanti0503/SaraswatiTkrGloryExceprts1.htm",
+      "discovered_at": "2026-02-12T15:26:13.093003"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "The Unforgettable Sweetness of the Dham,",
+      "url": "https://scsmath.com/docs/articles/050124_HolyDham-JMohini.html",
+      "discovered_at": "2026-02-12T15:26:13.093026"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Sri Gaura Purnima 2005 in Sri Chaitanya Saraswat Ashram, Eugene, Oregon, USA",
+      "url": "https://scsmath.com/docs/articles/050325-EugeneGauraPurnimaJMohin/050325-EugeneGPurnima.html",
+      "discovered_at": "2026-02-12T15:26:13.093049"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "An Ever-Expanding Ocean of Nectar",
+      "url": "https://scsmath.com/docs/articles/GauraPurnima_Article-JD_0804/GauraPurnima_Article-JD_0804.html",
+      "discovered_at": "2026-02-12T15:26:13.093072"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Our Wealth and our Life",
+      "url": "https://scsmath.com/docs/articles/OurWealthAndOurLife-byJmD-0610/OurWealthAndOurLife-byJagamohiniDasi.htm",
+      "discovered_at": "2026-02-12T15:26:13.093094"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Compiled by Jagamohini Dasi",
+      "url": "https://scsmath.com/docs/articles/PanihatiFestival_Jmohini0506/PanihatiFestival_Jmohin.html",
+      "discovered_at": "2026-02-12T15:26:13.093151"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Srila Guru Maharaj's Disappearance",
+      "url": "https://scsmath.com/docs/articles/SrilaGuruMj_Disapp-Jmohini-0508/RemembrngSGuruMjDis05.html",
+      "discovered_at": "2026-02-12T15:26:13.093196"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "In Calcutta with Srila Bhakti Sundar Govinda Dev-Goswami Maharaj,",
+      "url": "https://scsmath.com/docs/articles/0507pustakrsna_in_bengal.html",
+      "discovered_at": "2026-02-12T15:26:13.093218"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Sri Govardhan Puja",
+      "url": "https://scsmath.com/docs/articles/051102_GovardhanPuj-Kumkum/051102_GvrdnPujSGovM-Kmkm.html",
+      "discovered_at": "2026-02-12T15:26:13.093241"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "The Advent of Lord Jagannath",
+      "url": "https://scsmath.com/docs/articles/LordJagannathsAdvent.html",
+      "discovered_at": "2026-02-12T15:26:13.093264"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Surrender",
+      "url": "https://scsmath.com/docs/articles/Surrender-Vrnda-060527/Surrender-Vrnda-060527.html",
+      "discovered_at": "2026-02-12T15:26:13.093287"
+    },
+    {
+      "category": "misc_articles",
+      "type": "pdf",
+      "title": "Govardhan Puja - Sri Krishna lifts up Govardhan Hill",
+      "url": "https://scsmath.com/docs/articles/GovardhanPuja_PBhaktis0511.pdf",
+      "discovered_at": "2026-02-12T15:26:13.093309"
+    },
+    {
+      "category": "misc_articles",
+      "type": "pdf",
+      "title": "Sri Krishna Janmastami",
+      "url": "https://scsmath.com/docs/articles/Janmastami_PBhaktis0508.pdf",
+      "discovered_at": "2026-02-12T15:26:13.093333"
+    },
+    {
+      "category": "misc_articles",
+      "type": "pdf",
+      "title": "Srila Bhaktisiddhanta Saraswati Thakur",
+      "url": "https://scsmath.com/docs/articles/SarasTkrAp0503ParamaBhaktis.pdf",
+      "discovered_at": "2026-02-12T15:26:13.093355"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Updated \r            regularly",
+      "url": "https://scsmath.com/new.html",
+      "discovered_at": "2026-02-12T15:26:13.093378"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "",
+      "url": "https://scsmath.com/docs/feature_photo.html",
+      "discovered_at": "2026-02-12T15:26:13.093431"
+    },
+    {
+      "category": "misc_articles",
+      "type": "html_article",
+      "title": "Srila Gurudev(click to enlarge)",
+      "url": "https://scsmath.com/docs/feature_photo.html",
+      "discovered_at": "2026-02-12T15:26:13.093458"
+    }
+  ]
+}

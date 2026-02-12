@@ -1,0 +1,10 @@
+scsmath_library/
+scsmath_dataset/
+entropy_samples/
+homogeneity_test/
+sanitised_test/
+.venv/
+__pycache__/
+*.pyc
+*.png
+.DS_Store
