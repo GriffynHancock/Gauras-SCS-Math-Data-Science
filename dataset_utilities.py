@@ -70,16 +70,84 @@ class TextCleaner:
         return result
     
     @staticmethod
+    def detect_script(text: str) -> str:
+        """Detect if text is primarily Bengali, Devanagari, or Latin script."""
+        counts = Counter()
+        for char in text:
+            name = unicodedata.name(char, "")
+            if "BENGALI" in name:
+                counts["Bengali"] += 1
+            elif "DEVANAGARI" in name:
+                counts["Devanagari"] += 1
+            elif "LATIN" in name and char.isalpha():
+                counts["Latin"] += 1
+        
+        if not counts:
+            return "Unknown"
+        return counts.most_common(1)[0][0]
+
+    @staticmethod
+    def remove_contacts_only(text: str) -> str:
+        """Remove only phone numbers and URLs, keeping all religious text."""
+        lines = text.split('\n')
+        cleaned = []
+        
+        # Patterns for contacts and URLs only
+        patterns = [
+            r'\d{10,}', r'\d{3}-\d{3}-\d{4}', # Phone numbers
+            r'www\..*\.org', r'http[s]?://', # URLs
+            r'Email:', r'Mobile:', r'Phone:', r'Fax:'
+        ]
+        
+        for line in lines:
+            if any(re.search(p, line, re.I) for p in patterns):
+                # If a line is ONLY a phone number or URL, skip it
+                # If it's mixed, we might want to just strip the pattern (to be safe)
+                new_line = line
+                for p in patterns:
+                    new_line = re.sub(p, '', new_line, flags=re.I)
+                if new_line.strip():
+                    cleaned.append(new_line)
+                continue
+            cleaned.append(line)
+        
+        return '\n'.join(cleaned)
+
+    @staticmethod
+    def fix_bengali_ocr_errors(text: str) -> str:
+        """Fix common Bengali OCR mistakes."""
+        fixes = {
+            r'হ\*তে': 'হতে',
+            r'র’': 'র',
+            r'ত’': 'ত',
+            r'ন’': 'ন',
+            r'’': "'", # Standardize quotes
+        }
+        
+        result = text
+        for pattern, replacement in fixes.items():
+            result = re.sub(pattern, replacement, result)
+        
+        return result
+
+    @staticmethod
     def clean_text(text: str, 
                    remove_headers: bool = True,
                    normalize_devanagari: bool = False,
-                   fix_ocr: bool = True) -> str:
+                   fix_ocr: bool = True,
+                   is_bengali: bool = True) -> str:
         """Comprehensive text cleaning pipeline."""
         
         # Remove control characters
         text = ''.join(ch for ch in text if unicodedata.category(ch)[0] != 'C' or ch in '\n\t')
         
-        # Fix OCR errors
+        # Remove only contact info, preserve religious boilerplate/jai dhvani
+        text = TextCleaner.remove_contacts_only(text)
+        
+        if is_bengali:
+            text = TextCleaner.fix_bengali_ocr_errors(text)
+        
+        # Fix OCR errors (English/general)
         if fix_ocr:
             text = TextCleaner.fix_common_ocr_errors(text)
         
@@ -93,7 +161,6 @@ class TextCleaner:
         
         # Remove excessive whitespace
         text = re.sub(r'\n{3,}', '\n\n', text)
-        text = re.sub(r' {2,}', ' ', text)
         
         return text.strip()
 

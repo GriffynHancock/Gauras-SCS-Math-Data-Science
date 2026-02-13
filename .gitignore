@@ -5,18 +5,45 @@ __pycache__/
 *.pyc
 
 # LLM & Models
-llama.cpp/build/
-llama.cpp/models/*.gguf
-llama_server.log
+llama.cpp/
+llama_server*.log
 nohup.out
+llm_raw_debug.log
 
-# Local Data/Temp
-logs/
-temp_*.png
+# Database
+chroma_db/
+
+# Data
+data/raw/
+data/cleaned/
+data/enriched/
+data/processed/*.json
+data/processed/taxonomy_sample.txt
+
+# Keep specific jsonl samples if they exist
+!data/processed/*.jsonl
+
+# Temporary outputs
+*.txt
+!system_prompt.txt
+!requirements.txt
+!Unstructured Tutorial.txt
+*.png
 *.zip
+*.json
+!book_codes.json
+!gaudiya_gitanjali.json
+!main_index.json
+!source_index.json
 
-# Database (Optional: can be rebuilt from scripts)
-# chroma_db/ 
+# Exclude generated RAG outputs from general repo
+theological_query*.txt
+query_with_ids.txt
+youth_kirtan_rag*.txt
+final_rag_output.txt
+final_theological_query.txt
+targeted_enhancement_diff.txt
+enhancement_comparison.txt
 
 # OS Specific
 .DS_Store

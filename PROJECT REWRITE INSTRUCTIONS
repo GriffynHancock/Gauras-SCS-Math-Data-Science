@@ -1,0 +1,169 @@
+Below is a worked workflow description you can give to an LLM for how to build a RAG (Retrieval-Augmented Generation) pipeline using Unstructured for preprocessing/chunking and ChromaDB with a Chroma MCP server for vector storage and retrieval. It’s organized as step-by-step instructions, and references official docs where appropriate. (docs.unstructured.io)
+
+📘 RAG Workflow Instructions (Unstructured → Chroma MCP)
+🧩 Overview
+The goal is to take raw documents (PDFs, Word, HTML, etc.), preprocess and chunk them using Unstructured, then store them in ChromaDB via a Chroma MCP server, and finally enable semantic search + retrieval for use in generation. This workflow can be automated and is suitable for modern LLMs. (docs.unstructured.io)
+
+🛠️ 1. Set Up Environment
+1. Install Dependencies
+    * Install Unstructured with Chroma support: pip install "unstructured[chroma]"
+    * 
+    * Install ChromaDB and the MCP server package: pip install chromadb chroma-mcp-server
+    * 
+2. (Or install the specific MCP server implementation you plan to use.) (unstructured.readthedocs.io)
+3. Prepare Files
+    * Place all source documents (PDF, DOCX, HTML, etc.) into a directory such as: data/raw/
+    * 
+
+📄 2. Preprocess and Chunk Documents with Unstructured
+Use Unstructured ingest to parse + chunk + transform documents into RAG-ready units.
+Using Unstructured CLI
+unstructured-ingest \
+  local \
+  --input-path data/raw/ \
+  --output-dir data/processed/ \
+  --strategy basic \
+  --chunk-elements \
+  --embedding-provider "<provider name>" \
+  chroma \
+  --host "localhost" \
+  --port 8000 \
+  --collection-name "my_collection" \
+  --tenant "default_tenant" \
+  --database "default_db" \
+  --batch-size 80
+Notes:
+* --chunk-elements instructs Unstructured to split content into chunks. (unstructured.readthedocs.io)
+* Embedding provider should match what you intend to use later (e.g., OpenAI, HuggingFace, etc.).
+* Output goes directly toward Chroma ingestion.
+
+🧱 3. Launch the Chroma MCP Server
+A Chroma MCP server offers a Model Context Protocol interface that lets tools/LLMs interact with ChromaDB via standard CRUD/search requests. (GitHub)
+Example
+Run the MCP server process (HTTP transport mode):
+python -m app.chroma_mcp_server http 127.0.0.1 8000
+After this, your MCP client (LLM or agent) can call tools like:
+* chroma_create_collection
+* chroma_add_documents
+* chroma_query_documents
+* chroma_get_documents
+for persistent semantic storage and retrieval. (GitHub)
+
+📥 4. Ingest Processed Chunks into ChromaDB
+If using Unstructured destination connector (Chroma), ingestion happens automatically from step 2 as part of the ingest command — Unstructured will:
+1. Chunk the content
+2. Call MCP create/add document tools to send chunks + metadata to the Chroma MCP server
+If not using a connector, you can ingest manually via an MCP client:
+# pseudo-code, LLM agent might use MCP tools
+chroma_add_documents(
+  collection_name="my_collection",
+  documents=[chunk_text_1, chunk_text_2, ...],
+  metadatas=[{...}, {...}, ...],
+  ids=["doc1_chunk0", "doc1_chunk1", ...]
+)
+Each chunk should include relevant metadata (source doc, section title, language, etc.). (STMCP)
+
+🔍 5. Search + Retrieval
+Once documents are stored:
+Use MCP Tools
+* chroma_query_documents — run a semantic search over the collection: {
+*   "collection_name": "my_collection",
+*   "query_texts": ["Explain saranagati in Gita."],
+*   "n_results": 5,
+*   "where": {"language": "en"}
+* }
+*  You can filter with metadata (e.g., doc ID, tags). (Glama – MCP Hosting Platform)
+
+
+
+📌 Best Practices + Tips
+🔹 Metadata Matters
+Always store metadata with chunks (doc ID, section, source path, language) — this enables rich filtering during retrieval. (docs.unstructured.io)
+🔹 Chunk Strategy Matters
+Unstructured has multiple chunk strategies (basic, by similarity, by heading). Choose one that preserves logical segmentation for better retrieval quality. (docs.unstructured.io)
+🔹 Persistent Storage
+Ensure Chroma’s persistence (via MCP server config) so your RAG dataset is reusable across sessions. (GitHub)
+    
+What I mean by “semantic data”
+* Embeddings (dense vectors): numeric vector representations of chunk meaning (used for similarity search).
+* Semantic metadata / annotations: topics, named entities, canonical IDs, language, summaries, QA pairs, tags, taxonomy labels.
+* Derived semantic artifacts: chunk-level summary, canonicalized entity links, question-answer pairs, topic labels, translation/normalized text.
+* Quality signals: OCR confidence, language/confidence, provenance — these help avoid misleading retrievals.
+Why it’s relevant in this stack
+* Unstructured extracts and chunks source content and can also produce derived semantic artifacts (summaries, translations, QA-pairs) during ingestion.
+* Chroma stores embeddings + original text + arbitrary metadata and supports metadata filtering (where) plus efficient vector search.
+* MCP server is the transport/contract that lets your LLM/agent ask Chroma for semantically relevant chunks and filter by metadata (tenant, language, doc_id, tradition, etc.). Together they implement the two pillars of modern RAG: dense semantic retrieval (vectors) + provenance/filters (metadata).
+Recommended semantic fields to include (at ingest)
+1. embedding — dense vector (or computed inside Chroma if preferred).
+2. summary — 1–3 sentence auto-summary of the chunk.
+3. entities — list of named entities with canonical IDs (useful if you have a controlled vocabulary).
+4. topics / tags — inferred topics or manual tags (helps narrow retrieval).
+5. qa_pairs — a few synthetic Q/A pairs derived from the chunk (improves retrieval for question prompts).
+6. language + script — essential for Bengali/Hindi corpora.
+7. ocr_confidence, page, char_start/end — provenance + quality.
+8. source_doc_id, section, chunk_index — traceability.
+9. canonical_text / normalized — transliteration or normalized form for matching.
+10. embedding_model — the name/version of the embedding model used.
+Best practices (practical)
+* Compute embeddings at ingest (unless you want Chroma to compute them later). Persist them so re-index is reproducible.
+* Keep original text in Chroma in addition to embeddings (for quoting & reranking).
+* Store summaries & QA pairs per chunk — this improves prompt construction and can be embedded as separate vectors (title- or summary-embeddings).
+* Multivector strategy: store a title_embedding, body_embedding, and summary_embedding if you plan to search both for topical relevance and short-context matches.
+* Use metadata filters to scope retrieval (language, author, tradition, doc_id) to reduce false positives.
+* Hybrid retrieval: combine sparse (BM25) for exact match (names, dates) with dense (Chroma vectors) for meaning.
+* Rerank top-K: after Chroma returns top N by cosine similarity, use a cross-encoder or LLM to rerank for final prompt candidates.
+* Avoid embedding-model/LLM mismatch: choose an embedding model whose semantic space aligns well with your LLM’s reasoning and language coverage (especially important for Bengali/Hindi).
+* Store embedding model name & dims so you can re-embed later if needed.
+* Normalization & canonicalization: normalize spellings, transliterations, and store canonical entity ids — crucial for Indian-language corpora.
+* Chunk size + overlap: tune chunk size (short enough for precise answers, long enough for context), and add slight overlap so relevant context isn’t cut off.
+* Monitor retrieval quality: log retrievals, precision@k, hallucination rate, and user feedback to iteratively improve chunking/semantic features.
+Example chunk JSON (semantic-enriched)
+{
+  "id": "doc0001_chunk0003",
+  "doc_id": "doc0001",
+  "text": "শ্রীকৃষ্ণ — the highest person — is described as...",
+  "metadata": {
+    "title": "Bhagavad-gita Commentary",
+    "author": "Govinda Maharaj",
+    "language": "bn",
+    "script": "Bengali",
+    "chapter": "2",
+    "verse": "2.7",
+    "page": 12,
+    "char_start": 1024,
+    "char_end": 1298,
+    "ocr_confidence": 0.92,
+    "source_path": "data/raw/gita_commentary.pdf",
+    "tradition": "Gaudiya Vaishnavism",
+    "tags": ["saranagati", "self-surrender"],
+    "topics": ["devotion", "ontology"],
+    "entities": [
+      {"text": "Krishna", "type": "PERSON", "canonical_id": "krishna_0001"},
+      {"text": "Arjuna", "type": "PERSON", "canonical_id": "arjuna_0001"}
+    ],
+    "embedding_model": "openai-embedding-1536-v2",
+    "chunk_index": 3
+  },
+  "summary": "A short paragraph describing Arjuna's surrender and Krishna's response.",
+  "qa_pairs": [
+    {"q": "What is saranagati according to this passage?", "a": "Surrender to Krishna as the supreme refuge."}
+  ],
+  "embedding": null
+}
+(If precomputing embeddings, embedding would be a float array matching embedding_model.)
+How the LLM should use these fields at query time
+1. Receive user query.
+2. Optionally run a short query-embedding (same model) and call Chroma via MCP for n_results=K semantically similar chunks and apply where filters (e.g., "language":"bn" or "tradition":"Gaudiya Vaishnavism").
+3. Rerank the top-K with a cross-encoder/LLM using text + summary + qa_pairs to get highest-fidelity context.
+4. Build the prompt with: short system instruction, user question, the top 3–5 reranked chunks (with their citation metadata), and ask the LLM to answer and cite sources.
+5. If ambiguity remains, show the LLM the qa_pairs for candidate answers or use them to generate clarifying questions.
+Tradeoffs & pitfalls
+* Bloating Chroma with huge metadata slows down storage and transport; keep metadata concise and indexable.
+* Embedding drift: switching embedding models later requires re-embedding. Keep original embedding_model metadata to manage this.
+* Multilingual mismatch: use embedding models that support your languages (or maintain per-language models and metadata).
+* Over-reliance on vectors: always combine with metadata and provenance to avoid hallucinations.
+
+If you want, I can:
+* produce a ready-to-run ingest snippet (Unstructured → compute multilingual embeddings → add to Chroma via MCP) that implements the above semantic fields; or
+* craft a specific schema + validation checklist for your Bengali/Hindi + English corpus now.
+

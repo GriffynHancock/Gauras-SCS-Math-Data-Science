@@ -4,43 +4,50 @@ from chromadb.utils import embedding_functions
 from pathlib import Path
 
 def ingest():
-    chunks_file = Path("data/processed/refined_robust_chunks.json")
+    # 1. Load advanced chunks
+    chunks_file = Path("data/processed/advanced_chunks.json")
     if not chunks_file.exists():
         print(f"❌ Could not find {chunks_file}")
         return
 
-    print(f"📖 Loading refined robust chunks...")
+    print(f"📖 Loading advanced chunks from {chunks_file}...")
     with open(chunks_file, 'r', encoding='utf-8') as f:
         chunks = json.load(f)
 
+    # 2. Setup ChromaDB
+    print("🚀 Initializing ChromaDB (Advanced Collection)...")
     client = chromadb.PersistentClient(path="chroma_db")
+    
+    # We use the same embedding function to remain consistent with previous tests,
+    # but the metadata is now much richer.
     emb_fn = embedding_functions.DefaultEmbeddingFunction()
 
-    # Recreate the advanced collection
-    try:
-        client.delete_collection("scsmath_advanced")
-    except:
-        pass
-        
-    collection = client.create_collection(
+    # We use a new collection name to avoid mixing old data
+    collection = client.get_or_create_collection(
         name="scsmath_advanced",
         embedding_function=emb_fn
     )
 
+    # 3. Ingest in batches
     batch_size = 500
-    print(f"📥 Ingesting {len(chunks)} robust chunks...")
+    print(f"📥 Ingesting {len(chunks)} chunks in batches of {batch_size}...")
 
     for i in range(0, len(chunks), batch_size):
         batch = chunks[i:i + batch_size]
+        
         ids = [c["id"] for c in batch]
         texts = [c["text"] for c in batch]
         metadatas = [c["metadata"] for c in batch]
         
-        collection.add(ids=ids, documents=texts, metadatas=metadatas)
+        collection.add(
+            ids=ids,
+            documents=texts,
+            metadatas=metadatas
+        )
         if (i + len(batch)) % 2500 == 0 or (i + len(batch)) == len(chunks):
             print(f"  ✅ Ingested {i + len(batch)} / {len(chunks)}")
 
-    print("🎉 Expert Rebuild complete!")
+    print("🎉 Advanced Ingestion complete!")
 
 if __name__ == "__main__":
     ingest()

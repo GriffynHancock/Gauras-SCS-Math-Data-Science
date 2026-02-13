@@ -15,7 +15,9 @@ class ExpertRAGv2:
         where_clause = {}
         filters = []
         if entities:
-            filters.append({"entities": {"$in": entities}})
+            # entities are stored as comma-separated strings in this collection
+            # Using $contains logic or iterating. Chroma $in usually expects exact match for string.
+            pass 
         if types:
             filters.append({"type": {"$in": types}})
             
@@ -32,7 +34,6 @@ class ExpertRAGv2:
         return results
 
     def expand_triplets(self, initial_hits, window=3):
-        """Retrieve neighbors and identify logical Verse+Trans+Expl triplets."""
         enriched_results = []
         seen_ids = set()
 
@@ -41,7 +42,6 @@ class ExpertRAGv2:
             book_id = meta['book_id']
             idx = meta['chunk_index']
             
-            # Fetch window
             neighbors = self.collection.get(
                 where={
                     "$and": [
@@ -60,16 +60,13 @@ class ExpertRAGv2:
                 if n_id not in seen_ids:
                     type_label = n_meta['type'].upper()
                     ref = f" ({n_meta.get('chapter', '0')}.{n_meta.get('verse', '0')})" if 'verse' in n_meta else ""
-                    content_blocks.append(f"[{type_label}]{ref}
-{n_doc}")
+                    content_blocks.append(f"[{type_label}]{ref}\n{n_doc}")
                     seen_ids.add(n_id)
 
             if content_blocks:
                 enriched_results.append({
-                    "source": f"{n_meta['author']}, {n_meta['title']}",
-                    "content": "
-
-".join(content_blocks),
+                    "source": f"{n_meta.get('author', 'Unknown')}, {n_meta['title']}",
+                    "content": "\n\n".join(content_blocks),
                     "relevance": 1 - initial_hits['distances'][0][i]
                 })
 
@@ -79,24 +76,21 @@ def main():
     parser = argparse.ArgumentParser(description="Expert SCS Math RAG v2.0")
     parser.add_argument("query", help="Theological question")
     parser.add_argument("--top-k", type=int, default=3)
-    parser.add_argument("--entity", action='append', help="Filter by entity (e.g., Krishna)")
-    parser.add_argument("--type", action='append', help="Filter by type (e.g., sloka)")
+    parser.add_argument("--entity", action='append')
+    parser.add_argument("--type", action='append')
     args = parser.parse_args()
 
     rag = ExpertRAGv2()
     
-    print(f"🔍 Searching for: '{args.query}'...")
     initial = rag.query(args.query, n_results=args.top_k, entities=args.entity, types=args.type)
     final = rag.expand_triplets(initial)
 
-    print("
-" + "="*80)
+    print("\n" + "="*80)
     print("☸️  EXPERT THEOLOGICAL RETRIEVAL (v2.0)")
     print("="*80)
 
     for i, res in enumerate(final, 1):
-        print(f"
---- HIT {i} | {res['source']} (Rel: {res['relevance']:.2f}) ---")
+        print(f"\n--- HIT {i} | {res['source']} (Rel: {res['relevance']:.2f}) ---")
         print(res['content'])
         print("-" * 80)
 

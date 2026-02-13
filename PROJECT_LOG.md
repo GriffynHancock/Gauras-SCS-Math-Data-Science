@@ -20,15 +20,11 @@ The initial pipeline from raw text extraction to a functional vector database ha
 *   **Taxonomy Initiation**: Sampled 100 chunks and identified 12 core theological topics (e.g., Guru-tattva, Rasa-tattva).
 *   **Metadata Evolution**: Transitioning from basic chunking to "Rich Theological Chunks" with topic scores and dialogue detection.
 
-### Phase 6: Real LLM Enrichment Status
-*   **Infrastructure**: Built `llama.cpp` from source on M3 Mac; `llama-server` active on port 8080.
-*   **Enrichment Harness**: Implemented `real_llm_enricher.py` using local Llama 3.1 8B Instruct.
-*   **Verification**: Successfully processed 100 chunks with rich metadata (Entities, Topics, IAST Transliteration).
-*   **Sample Metadata**:
-    *   *Entities*: "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj", "Śrī Caitanya Sāraswat Maṭh".
-    *   *Topics*: Guru-tattva (1.0), Saranagati (0.5).
+### Phase 6.1: Expert Enrichment v3
+*   **Refined Goal**: Process chunks individually with a simplified LLM prompt to identify entities, types (Sloka, Explanation, Prose), and scriptural sources.
+*   **Infrastructure**: Using `llama-server` on port 8083 (CPU-only for stability during this test).
+*   **Status**: Staging a 15-chunk verification run.
 
-### Next Steps
-1.  **Bulk Enrichment**: Continue Phase 6 for the remaining 14,982 chunks (estimated time: ~100 hours at current rate, may need further parallelization or optimization).
-2.  **Triplet Retrieval**: Update `ExpertRAGv2` to search against `text_canonical` and filter by entities.
-3.  **UI/CLI Polish**: Add color-coded outputs for different theological types.
+### Current RAG State
+*   **Interface**: `expert_rag_v2.py` now supports "triplet" expansion (Verse + Translation + Purport).
+*   **Quality Control**: Implemented stricter "garbage" filtering for URL-only or low-token chunks.

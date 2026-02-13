@@ -1,0 +1,551 @@
+{
+  "books_summary": {
+    "total_krishnasearch_books": 54,
+    "new_books_from_ks": 34,
+    "existing_books_matched": 20,
+    "remaining_local_files_to_process": 161
+  },
+  "krishnasearch_index": [
+    {
+      "book_id": "en-AbsoluteHarmony",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-AbsoluteHarmony.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-AffectionateGuidance",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-AffectionateGuidance.txt",
+      "local_library_match": "scsmath_library/english_pdfs/AffectionateGuidance.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-AwakeningtotheAbsolute",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-AwakeningtotheAbsolute.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-BenedictineTreeofDivineAspiration",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-BenedictineTreeofDivineAspiration.txt",
+      "local_library_match": "scsmath_library/english_pdfs/BenedictineTree.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-BhagavatDarshan",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-BhagavatDarshan.txt",
+      "local_library_match": "scsmath_library/english_pdfs/BhagavatDarshan-scans.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-Bh\u0101gavat",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-Bh\u0101gavat.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-BrahmaSamhita",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-BrahmaSamhita.txt",
+      "local_library_match": "scsmath_library/english_pdfs/BrahmaSamhita-Quintessence_scans.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-CentenaryAnthology",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-CentenaryAnthology.txt",
+      "local_library_match": "scsmath_library/english_pdfs/CentenaryAnthology.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-DignityoftheDivineServitor",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-DignityoftheDivineServitor.txt",
+      "local_library_match": "scsmath_library/english_pdfs/DignityOfTheDivineServitor-scans.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-DivineAspiration",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-DivineAspiration.txt",
+      "local_library_match": "scsmath_library/english_pdfs/DivineAspiration_2006.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-DivineGuidance",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-DivineGuidance.txt",
+      "local_library_match": "scsmath_library/english_pdfs/DivineGuidance-2004.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-DivineMessagefortheDevotees",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-DivineMessagefortheDevotees.txt",
+      "local_library_match": "scsmath_library/english_pdfs/DivineMessageForTheDevotees-1993-scans.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-DivineServitor",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-DivineServitor.txt",
+      "local_library_match": "scsmath_library/english_pdfs/DignityOfTheDivineServitor-scans.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-GoldenReflections",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-GoldenReflections.txt",
+      "local_library_match": "scsmath_library/english_pdfs/GoldenReflections-scans.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-GoldenStaircase",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-GoldenStaircase.txt",
+      "local_library_match": "scsmath_library/english_pdfs/GoldenStaircase_1994.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-GoldenVolcanoofDivineLove",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-GoldenVolcanoofDivineLove.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-GuardianofDevotion",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-GuardianofDevotion.txt",
+      "local_library_match": "scsmath_library/english_pdfs/GuardianOfDevotion-DumDumPark1986-BlueCover.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-HeartandHalo",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-HeartandHalo.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-HolyEngagement",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-HolyEngagement.txt",
+      "local_library_match": "scsmath_library/english_pdfs/HolyEngagement.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-HolyNameandThetenoffencestobeavoided",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-HolyNameandThetenoffencestobeavoided.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-HomeComfort",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-HomeComfort.txt",
+      "local_library_match": "scsmath_library/english_pdfs/HomeComfort6thIndianEdition.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-InSearchoftheOriginalSource",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-InSearchoftheOriginalSource.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-InnerFulfilment",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-InnerFulfilment.txt",
+      "local_library_match": "scsmath_library/english_pdfs/InnerFulfilment-2004.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-KirtanGuide",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-KirtanGuide.txt",
+      "local_library_match": "scsmath_library/english_pdfs/KirtanGuidePocketEdition-English-2013.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-K\u012brttanGuide",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-K\u012brttanGuide.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-LovingSearchForTheLostServant",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-LovingSearchForTheLostServant.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-NectareanGloriesof\u015ar\u012bNity\u0101nandaPrabhu",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-NectareanGloriesof\u015ar\u012bNity\u0101nandaPrabhu.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-OceanofNectar",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-OceanofNectar.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-Prakrta-rasa-sata-dusani",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-Prakrta-rasa-sata-dusani.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-RelativeWorlds",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-RelativeWorlds.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-ReligionoftheHeart",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-ReligionoftheHeart.txt",
+      "local_library_match": "scsmath_library/english_pdfs/ReligionOfTheHeart-2ndEd.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-RevealedTruth",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-RevealedTruth.txt",
+      "local_library_match": "scsmath_library/english_pdfs/RevealedTruth-WebUpdated-130706.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "en-R\u0101yR\u0101m\u0101nanda",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-R\u0101yR\u0101m\u0101nanda.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-SearchFor\u015ar\u012bK\u1e5b\u1e63\u1e47a",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-SearchFor\u015ar\u012bK\u1e5b\u1e63\u1e47a.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-SermonsoftheGuardianofDevotionVol1",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-SermonsoftheGuardianofDevotionVol1.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-SermonsoftheGuardianofDevotionVol2",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-SermonsoftheGuardianofDevotionVol2.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-SermonsoftheGuardianofDevotionVol3",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-SermonsoftheGuardianofDevotionVol3.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-SermonsoftheGuardianofDevotionVol4",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-SermonsoftheGuardianofDevotionVol4.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-SubjectiveEvolutionofConsciousness",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-SubjectiveEvolutionofConsciousness.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-TempleofLoveandAffection",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-TempleofLoveandAffection.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-\u015aara\u1e47\u0101gati",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-\u015aara\u1e47\u0101gati.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-\u015ar\u012bChaitanyaMah\u0101prabhu-HisLifeandPrecepts",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-\u015ar\u012bChaitanyaMah\u0101prabhu-HisLifeandPrecepts.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-\u015ar\u012bGuruandHisGrace",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-\u015ar\u012bGuruandHisGrace.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-\u015ar\u012bNavadv\u012bpa-dh\u0101ma-m\u0101h\u0101tmyaand\u015ar\u012bNavadv\u012bpa-bh\u0101va-tara\u1e45ga",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-\u015ar\u012bNavadv\u012bpa-dh\u0101ma-m\u0101h\u0101tmyaand\u015ar\u012bNavadv\u012bpa-bh\u0101va-tara\u1e45ga.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-\u015ar\u012bmadBhagavad-g\u012bt\u0101",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-\u015ar\u012bmadBhagavad-g\u012bt\u0101.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-\u015ar\u012b\u015ar\u012bPrapanna-j\u012bvan\u0101m\u1e5btam",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-\u015ar\u012b\u015ar\u012bPrapanna-j\u012bvan\u0101m\u1e5btam.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "en-\u015ar\u012b\u015ar\u012bPrema-vivarta",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/en-\u015ar\u012b\u015ar\u012bPrema-vivarta.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "non-en-ShashvataSukhaNiketan",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/non-en-ShashvataSukhaNiketan.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "non-en-SriBhaktiRaksakHarikathamrita",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/non-en-SriBhaktiRaksakHarikathamrita.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "non-en-SriNavadvipa-dhama-mahatmya",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/non-en-SriNavadvipa-dhama-mahatmya.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "non-en-SriShiksashtaka",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/non-en-SriShiksashtaka.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "non-en-SriSriPrapanna-jivanamrita",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/non-en-SriSriPrapanna-jivanamrita.txt",
+      "local_library_match": null,
+      "is_new": true
+    },
+    {
+      "book_id": "non-en-SuvarnaSopan",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/non-en-SuvarnaSopan.txt",
+      "local_library_match": "scsmath_library/indian_lang_pdfs/SuvarnaSopan.pdf",
+      "is_new": false
+    },
+    {
+      "book_id": "non-en-\u015ar\u012bmadBhagavad-g\u012bt\u0101",
+      "krishnasearch_status": "complete",
+      "krishnasearch_path": "krishnasearch_scrape/non-en-\u015ar\u012bmadBhagavad-g\u012bt\u0101.txt",
+      "local_library_match": null,
+      "is_new": true
+    }
+  ],
+  "remaining_local_library": [
+    "scsmath_library/english_pdfs/Catalog-ALLBooksAndAddresses-May2007.pdf",
+    "scsmath_library/english_pdfs/Search_for_Sri_Krishna.pdf",
+    "scsmath_library/english_pdfs/SubjectiveEvolution-1998.pdf",
+    "scsmath_library/english_pdfs/OriginalSource2ndEd-2001.pdf",
+    "scsmath_library/english_pdfs/GitaHiddenTreasure-2ndEdition.pdf",
+    "scsmath_library/english_pdfs/SriGuruAndHisGrace-4thPrinting-1999.pdf",
+    "scsmath_library/english_pdfs/Ocean_of_Nectar-2004.pdf",
+    "scsmath_library/english_pdfs/ChaitanyaSaraswati-No1-VoiceOfSriChaitanyadev-scans.pdf",
+    "scsmath_library/english_pdfs/LovingSearchForThe LostServant-ColourSoftCover.pdf",
+    "scsmath_library/english_pdfs/TheBhagavata-colour.pdf",
+    "scsmath_library/english_pdfs/SpiritualAssistanceForOurFriends.pdf",
+    "scsmath_library/english_pdfs/Prapanna-Jivanamritam_searchable.pdf",
+    "scsmath_library/english_pdfs/ChaitanyaMahaprabhu-HisLifeAndPrecepts.pdf",
+    "scsmath_library/english_pdfs/Catalogue2003-SCSMathPublications.pdf",
+    "scsmath_library/english_pdfs/HaridasaThakura_BookletTranslatedByBVijnanBharatiMj-1986-scans.pdf",
+    "scsmath_library/english_pdfs/HolyName_GloriesAndOffencesToAvoid6thEd.pdf",
+    "scsmath_library/english_pdfs/GoldenVolcano-2006.pdf",
+    "scsmath_library/english_pdfs/Catalogue2007-SCSMathPublications.pdf",
+    "scsmath_library/english_pdfs/Sermons_Vol_4-scans.pdf",
+    "scsmath_library/english_pdfs/KirttanGuide10th_Updated_23_08_03.pdf",
+    "scsmath_library/english_pdfs/Sermons_Vol_2_scans.pdf",
+    "scsmath_library/english_pdfs/Premadhama-deva-stotram.pdf",
+    "scsmath_library/english_pdfs/ServiceLife.pdf",
+    "scsmath_library/english_pdfs/Archchan-kana.pdf",
+    "scsmath_library/english_pdfs/ExclusiveGuardianship.pdf",
+    "scsmath_library/english_pdfs/NectareanGloriesOfSriNityanandaPrabhu-120209.pdf",
+    "scsmath_library/english_pdfs/Sermons_Vol_1_scans.pdf",
+    "scsmath_library/english_pdfs/GuardianOfDevotion-SanJoseEdition-BrownCover.pdf",
+    "scsmath_library/english_pdfs/Sermons_Vol_3_1999.pdf",
+    "scsmath_library/english_pdfs/Saranagati-withRunningCorrections-120802.pdf",
+    "scsmath_library/english_pdfs/HiddenTreasureOfHolyDhamaNabadwipa-NabadwipDhamMahatmya-n-NabadwipBhavataranga-scans.pdf",
+    "scsmath_library/english_pdfs/NabadwipDhamMahatmya_and_SriNabadadwipBhavaTaranga-Web2015.pdf",
+    "scsmath_library/english_pdfs/SaraswatStyleManual_1.0.2_120724-FormalRelease.pdf",
+    "scsmath_library/english_pdfs/ChaitanyaSaraswati-No2-1994_scans.pdf",
+    "scsmath_library/english_pdfs/LandOfNectar-ColouringBook-2007.pdf",
+    "scsmath_library/english_pdfs/Heart_and_Halo.pdf",
+    "scsmath_library/indian_lang_pdfs/ShashvataSukhaNiketana_Hindi.pdf",
+    "scsmath_library/indian_lang_pdfs/Rochanamrita.pdf",
+    "scsmath_library/indian_lang_pdfs/KalyanaKalpaTaru.pdf",
+    "scsmath_library/indian_lang_pdfs/SharanagatiOSriLadhu-chandrika-bhashya.pdf",
+    "scsmath_library/indian_lang_pdfs/SriShikshashtaka.pdf",
+    "scsmath_library/indian_lang_pdfs/JiveraSvatantrata.pdf",
+    "scsmath_library/indian_lang_pdfs/BrahmaSamhita-Quintessence_scans.pdf",
+    "scsmath_library/indian_lang_pdfs/SadhanaPatha.pdf",
+    "scsmath_library/indian_lang_pdfs/SriSriPrema-dhama-deva-stotram_Hindi.pdf",
+    "scsmath_library/indian_lang_pdfs/SriNamaBhajanaVicharaOPranali.pdf",
+    "scsmath_library/indian_lang_pdfs/ShashvataSukhaNiketana_Bengali.pdf",
+    "scsmath_library/indian_lang_pdfs/ParamarthaDharmaNirnaya.pdf",
+    "scsmath_library/indian_lang_pdfs/SriGurudevaOTaraKaruna.pdf",
+    "scsmath_library/indian_lang_pdfs/SriBhaktiRaksakDivyaVani_PartFour.pdf",
+    "scsmath_library/indian_lang_pdfs/SriSriPrema-dhama-deva-stotram_Oriyan.pdf",
+    "scsmath_library/indian_lang_pdfs/SriNabadwipaBhavaTaranga.pdf",
+    "scsmath_library/indian_lang_pdfs/SriSriNityanandaMahimamrita.pdf",
+    "scsmath_library/indian_lang_pdfs/SriHari-namONamaparadha.pdf",
+    "scsmath_library/indian_lang_pdfs/KrishnanushilanaSanghaVani_1987.pdf",
+    "scsmath_library/indian_lang_pdfs/SriGaudiyaGitanjali.pdf",
+    "scsmath_library/indian_lang_pdfs/SriChaitanyaBhagavata.pdf",
+    "scsmath_library/indian_lang_pdfs/SriSriPrapanna-jivanamritam.pdf",
+    "scsmath_library/indian_lang_pdfs/ArchanKan_SecondEdition.pdf",
+    "scsmath_library/indian_lang_pdfs/SriBhakti-rasamrita-sindhu.pdf",
+    "scsmath_library/indian_lang_pdfs/SriNamaNamabhasaONamaparadhaVichara.pdf",
+    "scsmath_library/indian_lang_pdfs/ParamarthaPathaNirdesha.pdf",
+    "scsmath_library/indian_lang_pdfs/SriKrishnaKarnamritam_FirstEdition.pdf",
+    "scsmath_library/indian_lang_pdfs/SriBhaktiKalpaVrksha.pdf",
+    "scsmath_library/indian_lang_pdfs/AbhinavaPuratasundaraBhagavanGaurasundareraBahnigarbhaVipralambhaLilaraSamahara.pdf",
+    "scsmath_library/indian_lang_pdfs/AmritaVidya_SecondEdition.pdf",
+    "scsmath_library/indian_lang_pdfs/ShuddhaBhaktiRatnavali.pdf",
+    "scsmath_library/indian_lang_pdfs/KrishnanushilanaSanghaVani_1988.pdf",
+    "scsmath_library/indian_lang_pdfs/SriChaitanyaCharitamrita.pdf",
+    "scsmath_library/indian_lang_pdfs/SevaMadhuryaMaryada.pdf",
+    "scsmath_library/indian_lang_pdfs/RasarajaSriKrishna.pdf",
+    "scsmath_library/indian_lang_pdfs/DuravastharaParapareParamaSatyaOSundaraBhagavaneraSangeYogayogeraUpaya.pdf",
+    "scsmath_library/indian_lang_pdfs/SriKrishnaKarnamritam.pdf",
+    "scsmath_library/indian_lang_pdfs/PremamayaAnveshana.pdf",
+    "scsmath_library/indian_lang_pdfs/AmritaVidya_FirstEdition.pdf",
+    "scsmath_library/misc_articles/Approaching_the_Infinite.html",
+    "scsmath_library/misc_articles/Lord_of_the_Cows.html",
+    "scsmath_library/misc_articles/From_Sri_Guru_and_His_Grace.html",
+    "scsmath_library/misc_articles/One_Master_Dog___Spiritual_Fidelity_and_Loyalty_.html",
+    "scsmath_library/misc_articles/The_Most_Magnanimous_Welfare_Workers.html",
+    "scsmath_library/misc_articles/GovardhanPuja_PBhaktis0511.pdf",
+    "scsmath_library/misc_articles/Sharagrahi_Vaishnava.html",
+    "scsmath_library/misc_articles/The_Holy_Appearance_Day_of_Lord_Nrsimhadeva.html",
+    "scsmath_library/misc_articles/A_Tragedy_of_Separation.html",
+    "scsmath_library/misc_articles/The_Benedictine_Tree_of_Divine_Aspiration___Excerp.html",
+    "scsmath_library/misc_articles/Janmastami_PBhaktis0508.pdf",
+    "scsmath_library/misc_articles/Wake_Up__Sleeping_Souls.html",
+    "scsmath_library/misc_articles/The_Unforgettable_Sweetness_of_the_Dham_.html",
+    "scsmath_library/misc_articles/YourMostFortunatePosition.pdf",
+    "scsmath_library/misc_articles/_A_Tragedy_of_Separation__.html",
+    "scsmath_library/misc_articles/Sri_Gaura_Purnima_2005_in_Sri_Chaitanya_Saraswat_A.html",
+    "scsmath_library/misc_articles/Focusing_on_our_fortune.html",
+    "scsmath_library/misc_articles/AdventOfSriGaurasundar.pdf",
+    "scsmath_library/misc_articles/Sri_Sri_Prapanna_Jivanamrtam___Introducing_the_boo.html",
+    "scsmath_library/misc_articles/Talk_by_Srila_Bhakti_Sundar_Govinda_Dev_Goswami_Ma.html",
+    "scsmath_library/misc_articles/SGuruMRemembers-CenAnth.pdf",
+    "scsmath_library/misc_articles/ADayAtHapaniya.pdf",
+    "scsmath_library/misc_articles/The_Line_of_Sri_Rupa.html",
+    "scsmath_library/misc_articles/Our_Wealth_and_our_Life.html",
+    "scsmath_library/misc_articles/An_Ever_Expanding_Ocean_of_Nectar.html",
+    "scsmath_library/misc_articles/In_Glorification_of_Sri_Advaita_Acharyya.html",
+    "scsmath_library/misc_articles/Srila_Govinda_Maharaj__His_Life_and_Mission_in_bri.html",
+    "scsmath_library/misc_articles/Srila_Haridas_Thakur_s_Divine_Glories.html",
+    "scsmath_library/misc_articles/_The_Lotus_feet_of_Gadadhar_Pandit_are_our_sole_tr.html",
+    "scsmath_library/misc_articles/The_Glory_of_the_Sri_Chaitanya_Saraswat_Math.html",
+    "scsmath_library/misc_articles/Extract_from_Divine_Guidance__Chapter_Two___On_the.html",
+    "scsmath_library/misc_articles/Chapter_Seven___Intelligently_Aware__.html",
+    "scsmath_library/misc_articles/Introduction__to_The_Loving_Search_For_The_Lost_Se.html",
+    "scsmath_library/misc_articles/Srila_Guru_Maharaj_Remembers.html",
+    "scsmath_library/misc_articles/GuruPrasastih-CenAnth.pdf",
+    "scsmath_library/misc_articles/Srila_Saraswati_Thakur_s_Disappearance.html",
+    "scsmath_library/misc_articles/_Our_Conception__Our_Principle_and_Our_Bhajan_.html",
+    "scsmath_library/misc_articles/Sri_Brahma_samhita_Prologue.html",
+    "scsmath_library/misc_articles/Purusottam__the_extra_month_.html",
+    "scsmath_library/misc_articles/_We_must_follow_the_service_mood_of_Lalitadevi_.html",
+    "scsmath_library/misc_articles/The_Jewel_of_the_Garland.html",
+    "scsmath_library/misc_articles/The_Holy_Month_of_Karttik.html",
+    "scsmath_library/misc_articles/The_Advent_of_Lord_Jagannath.html",
+    "scsmath_library/misc_articles/Gain_a_visa_from_the_Vaikuntha_Embassy.html",
+    "scsmath_library/misc_articles/Srila_Gurudev_click_to_enlarge_.html",
+    "scsmath_library/misc_articles/Surrender.html",
+    "scsmath_library/misc_articles/Disappearance_letter_by_Sripad_B_B__Avadhut_Mahara.html",
+    "scsmath_library/misc_articles/Srila_Saraswati_Thakur_s_Appearance.html",
+    "scsmath_library/misc_articles/In_glorification_of_Srila_Guru_Maharaj.html",
+    "scsmath_library/misc_articles/Universal_Conception_of_Guru.html",
+    "scsmath_library/misc_articles/The_Unlimited__Unconditional_Mercy_of_Nityananda_P.html",
+    "scsmath_library/misc_articles/Srila_Bhakti_Sundar_Govinda_Dev_Goswami_Maharaj.html",
+    "scsmath_library/misc_articles/Narottam_from-AffGdnc.pdf",
+    "scsmath_library/misc_articles/AppearanceOfSriGaurasundar.pdf",
+    "scsmath_library/misc_articles/Our_Lord_s_Beloved_Power.html",
+    "scsmath_library/misc_articles/Updated______________regularly.html",
+    "scsmath_library/misc_articles/Nirjala_Ekadasi.html",
+    "scsmath_library/misc_articles/_Please_Give_Me_Shelter_at_Your_Lotus_Feet_.html",
+    "scsmath_library/misc_articles/Sri_Govardhan_Puja.html",
+    "scsmath_library/misc_articles/Pranati_Dasakam.html",
+    "scsmath_library/misc_articles/SarasTkrAp0503ParamaBhaktis.pdf",
+    "scsmath_library/misc_articles/Sowing_the_seed_of_our_highest_benefit.html",
+    "scsmath_library/misc_articles/Read_about_our_logo.html",
+    "scsmath_library/misc_articles/Compiled_by_Jagamohini_Dasi.html",
+    "scsmath_library/misc_articles/Two_chapters__the_Introduction_and_The_Krishna_Con.html",
+    "scsmath_library/misc_articles/A_Transcendental_Relationship.html",
+    "scsmath_library/misc_articles/In_Calcutta_with_Srila_Bhakti_Sundar_Govinda_Dev_G.html",
+    "scsmath_library/misc_articles/Srila_Guru_Maharaj_s_Disappearance.html",
+    "scsmath_library/misc_articles/First_Become_a_Disciple___Self_Dissipation_and_Dev.html",
+    "scsmath_library/misc_articles/_Real_Initiation___Nurturing_the_seed_of_Krishna_p.html",
+    "scsmath_library/misc_articles/Sanatan_Goswami_and_the_sweet_rice.html",
+    "scsmath_library/english_epubs/The_Divine_Servitor.epub",
+    "scsmath_library/english_epubs/Heart_and_Halo.epub",
+    "scsmath_library/english_epubs/Srimad_Bhagavad-gita.epub",
+    "scsmath_library/english_epubs/Golden_Reflections.epub",
+    "scsmath_library/english_epubs/Nityananda_Mahimamritam.epub",
+    "scsmath_library/english_epubs/Sri_Guru_and_His_Grace.epub",
+    "scsmath_library/english_epubs/The_Golden_Volcano_of_Divi.epub",
+    "scsmath_library/english_epubs/Sri_Sri_Prapanna-jivanamri.epub",
+    "scsmath_library/english_epubs/Revealed_Truth.epub",
+    "scsmath_library/english_epubs/Original_Source.epub",
+    "scsmath_library/english_epubs/Bhagavat_Darshan.epub",
+    "scsmath_library/english_epubs/Inner_Fulfillment.epub",
+    "scsmath_library/english_epubs/The_Bhagavat.epub",
+    "scsmath_library/english_epubs/Home_Comfort.epub",
+    "scsmath_library/english_epubs/Sri_Chaitanya_Mahaprabhu_.epub"
+  ]
+}
