@@ -1,0 +1,4 @@
+2026-02-13 11:41:34,301 - root - INFO - STDIO MODE: Logging configured - all logs redirected to /Users/gaura/scss/logs/chroma_mcp_stdio_1770943294.log
+2026-02-13 11:41:34,301 - chromamcp.unconfigured - WARNING - Logger requested before main configuration.
+2026-02-13 11:41:34,301 - root - INFO - Log retention policy set to 7 days
+2026-02-13 11:41:34,301 - root - INFO - Monkey patched logging.getLogger to ensure all future loggers use file output only
