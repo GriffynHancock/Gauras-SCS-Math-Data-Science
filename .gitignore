@@ -1,10 +1,22 @@
-scsmath_library/
-scsmath_dataset/
-entropy_samples/
-homogeneity_test/
-sanitised_test/
+# Environments
 .venv/
+.venv311/
 __pycache__/
 *.pyc
-*.png
+
+# LLM & Models
+llama.cpp/build/
+llama.cpp/models/*.gguf
+llama_server.log
+nohup.out
+
+# Local Data/Temp
+logs/
+temp_*.png
+*.zip
+
+# Database (Optional: can be rebuilt from scripts)
+# chroma_db/ 
+
+# OS Specific
 .DS_Store
