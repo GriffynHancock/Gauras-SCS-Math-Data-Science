@@ -18,16 +18,16 @@ Every chunk will strictly adhere to this schema:
   "id": "unique_id_v1",
   "text": "The actual text content...",
   "metadata": {
-    "book_id": "en-RevealedTruth",
-    "title": "Revealed Truth",
+    "book_id": "",
+    "title": "",
     "author": "Srila B.R. Sridhar Maharaj",
     "chunk_index": 0,
-    "type": "prose | song_verse | sloka | purport",
-    "verse_number": 1,
-    "topics": ["Guru-tattva", "Seva"],
-    "entities": ["Mahaprabhu", "Nityananda"],
-    "sentiment": "devotional_ecstasy",
-    "source_ref": "Chapter 5, Verse 12"
+    "type": "prose | song | sloka | discourse | introduction | directory",
+    "topics": ["Guru-tattva", "Seva", "History", "Vishnu Tattva"],
+    "entities": ["Mahaprabhu", "Nityananda", "Vedas", "Harinam"],
+    "has_sloka": True,
+    "source_ref": ["SB 5:12", "Harinamamrita Vyakaranam"],
+    "summary": ""
   }
 }
 ```
@@ -36,13 +36,14 @@ Every chunk will strictly adhere to this schema:
 For devotional songs, we pair the transliterated verse with its English translation:
 ```json
 {
-  "id": "gaura-arati_v1",
-  "text": "(kiba) jaya jaya gaurāchā̐der ārotiko śobhā\njāhṇavī-taṭa-vane jagamana-lobhā\n(jaga janer mana-lobhā)\n(gaurāṅger āroti śobhā jaga janer mana-lobhā)\n(nitāi gaura haribol)\n\n(1) All glories, all glories to the beautiful ceremony of worship to Lord Gaurachandra in a grove on the banks of the Jāhṇavī river! It is attracting the minds of all living entities in the universe.",
+  "id": "jayare-jayare-jaya-paramahamsa-mahashiaya_v19",
+  "verse": "te-kāraṇe prayāsa yathā vāmanera āśa\ngaganera chā̐da dhori bāre\nadoṣa-daraśī tumi adhama patita āmi\nnija guṇe kṣomivā āmāre\n\n",
+  "translation": (19) For this reason I endeavour thus, just like a dwarf aspiring to reach the moon. I am lowly and fallen, but your nature is not to consider any offence, so I beg you to pardon my flaws.",
   "metadata": {
-    "title": "Śrī Gaura-ārati",
-    "verse_number": 1,
+    "title": "jayare-jayare-jaya-paramahamsa-mahashiaya",
+    "verse_number": 19,
     "author": "Srila Bhaktivinoda Thakur",
-    "type": "song_verse"
+    "type": "song"
   }
 }
 ```
