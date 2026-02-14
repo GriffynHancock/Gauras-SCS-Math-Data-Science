@@ -36,12 +36,12 @@ Every chunk will strictly adhere to this schema:
 For devotional songs, we pair the transliterated verse with its English translation:
 ```json
 {
-  "id": "nityananda-dvadasakam_v1",
-  "text": "yo ’nanto ’nanta-vaktrair niravadhi\nhari-saṁkīrtanaṁ saṁvidhatte...\n\n(1) Lord Nityānanda’s representation as Ananta Śeṣa possesses unlimited mouths which propagate and glorify Lord Hari’s Holy Names...",
+  "id": "gaura-arati_v1",
+  "text": "(kiba) jaya jaya gaurāchā̐der ārotiko śobhā\njāhṇavī-taṭa-vane jagamana-lobhā\n(jaga janer mana-lobhā)\n(gaurāṅger āroti śobhā jaga janer mana-lobhā)\n(nitāi gaura haribol)\n\n(1) All glories, all glories to the beautiful ceremony of worship to Lord Gaurachandra in a grove on the banks of the Jāhṇavī river! It is attracting the minds of all living entities in the universe.",
   "metadata": {
-    "title": "Śrīman Nityānanda Dvādaśakam",
+    "title": "Śrī Gaura-ārati",
     "verse_number": 1,
-    "author": "Srila B.R. Sridhar Maharaj",
+    "author": "Srila Bhaktivinoda Thakur",
     "type": "song_verse"
   }
 }
