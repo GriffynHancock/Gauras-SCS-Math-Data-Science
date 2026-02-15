@@ -1,3 +1,4 @@
+fastmcp
 llama-index
 llama-index-llms-llama-cpp
 llama-index-embeddings-huggingface

@@ -50,7 +50,18 @@ Every chunk contains:
    python test_rag.py
    ```
 
+## MCP Integration (Jan.ai / Claude)
+
+This pipeline can be exposed as a **Model Context Protocol (MCP)** server, allowing AI agents like Jan.ai or Claude Desktop to query the Gaudiya Vaishnava scriptures as a tool.
+
+### Setup in Jan.ai:
+1. Enable **Experimental Features** in Settings.
+2. Add a new **MCP Server**:
+   - **Command**: `/Users/gaura/scss/Attempt2/.venv/bin/python`
+   - **Arguments**: `/Users/gaura/scss/Attempt2/mcp_server.py`
+
 ## Requirements
+- `fastmcp`
 - `llama-index`
 - `chromadb`
 - `sentence-transformers`

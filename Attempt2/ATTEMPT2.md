@@ -75,7 +75,27 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Directory Structure
+### MCP Server Setup (Jan.ai / Claude)
+
+You can use this RAG pipeline as a tool within Jan.ai or Claude Desktop using the Model Context Protocol (MCP).
+
+### 1. Enable MCP in Jan.ai
+- Open Jan.ai -> **Settings** -> **Advanced**.
+- Toggle **Experimental Features** to **ON**.
+- Go to **Settings** -> **MCP Servers**.
+- (Optional but recommended) Toggle **Allow All MCP Tool Permissions** to **ON**.
+
+### 2. Add the Gaudiya RAG Server
+Click **Add Server** and use the following configuration:
+
+- **Server Name:** `GaudiyaRAG`
+- **Command:** `/Users/gaura/scss/Attempt2/.venv/bin/python`
+- **Arguments:** `/Users/gaura/scss/Attempt2/mcp_server.py`
+
+### 3. Usage
+Once connected, any model with tool-calling capabilities (e.g., GPT-4o, Claude 3.5, or a local model with tool support) will see the `gaudiya_rag_query` tool. You can ask questions like "Who is Mahaprabhu according to Sridhar Maharaj?" and the model will autonomously use the RAG tool to fetch the answer.
+
+## Directory Structure
 ```
 Attempt2/
 ├── .venv/
