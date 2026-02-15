@@ -7,6 +7,21 @@ class SongChunker:
     def __init__(self):
         # Regex to identify verse numbers like (1), (2), etc.
         self.verse_pattern = re.compile(r'^\((\d+)\)\s*(.*)', re.MULTILINE)
+        
+        self.author_patterns = {
+            "Srila Bhaktivinoda Thakur": [r"Bhaktivinoda", r"Bhakti\s*Vinod"],
+            "Srila B.R. Sridhar Maharaj": [r"Sridhar", r"Śrīdhar"],
+            "Srila B.S. Govinda Maharaj": [r"Govinda"],
+            "Srila Narottama Das Thakur": [r"Narottama", r"Narottam"],
+            "Srila Lochan Das Thakur": [r"Lochan"],
+        }
+
+    def _detect_author(self, text: str) -> str:
+        for author, patterns in self.author_patterns.items():
+            for pattern in patterns:
+                if re.search(pattern, text, re.IGNORECASE):
+                    return author
+        return "Unknown"
 
     def chunk_song(self, file_path: str, metadata_ext: Dict = None) -> List[Dict]:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -14,19 +29,12 @@ class SongChunker:
 
         lines = content.split('\n')
         title = ""
-        author = "Unknown"
         
         # Try to extract title from first line if it looks like a title
         if lines and lines[0].strip() and not lines[0].startswith('('):
             title = lines[0].strip()
 
-        # Simple heuristic for author if mentioned in the text
-        if "Bhaktivinoda" in content:
-            author = "Srila Bhaktivinoda Thakur"
-        elif "Sridhar" in content:
-            author = "Srila B.R. Sridhar Maharaj"
-        elif "Govinda" in content:
-            author = "Srila B.S. Govinda Maharaj"
+        author = self._detect_author(content)
 
         # Split content into verses and translations
         chunks = []

@@ -10,7 +10,8 @@ This directory contains the second iteration of the Gaudiya Vaishnava RAG pipeli
 - **`test_ingestion.py`**: Driver script for bulk processing with resume capability.
 
 ### 2. Enrichment
-- **Dual-Model Pass**: Combines `bert-large-NER` for fast entity extraction with `Jan-v3-4b` (via llama.cpp) for deep theological tagging.
+- **NOTE: The `bert-large-NER` model is currently non-functional and has been disabled.**
+- **LLM-Driven Tagging**: Uses `Jan-v3-4b` (via llama.cpp) for deep theological tagging, including topics, entities, and summaries.
 - **Resume-Safe**: Progress is checkpointed to `enriched_chunks.jsonl`, allowing the process to survive crashes or interruptions.
 - **Prompt Driven**: Driven by `PROMPT.txt`, enforcing strict metadata extraction rules (topics, entities, summaries).
 

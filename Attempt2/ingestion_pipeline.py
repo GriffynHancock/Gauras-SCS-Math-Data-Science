@@ -1,3 +1,30 @@
+"""
+INGESTION & ENRICHMENT CONTROL FLOW (Step-by-Step):
+1. INITIALIZATION: IngestionPipeline is initialized with paths for ChromaDB, local models, and a metadata extraction prompt (PROMPT.txt).
+2. MODEL LOADING:
+    - load_model(): Loads the BGE-M3 (or Qwen3) embedding model into memory on MPS (Mac) or CPU.
+    - load_llm(): Loads a local Jan-v3-4b GGUF model via llama_index for metadata enrichment.
+3. DATA INGESTION:
+    - ingest_books(): Recursively finds .txt files. If recognized as scripture (via tools.scripture_chunker), it uses generic_scripture_chunker; otherwise, it uses split_into_normal_chunks.
+    - ingest_songs(): Parses .json or .txt song files, combining verses and translations into single chunks.
+    - _create_gold_standard_chunk(): Wraps raw text and basic metadata into a unified schema defined in ATTEMPT2.md.
+4. METADATA ENRICHMENT:
+    - enrich_chunks(): Iterates through raw chunks.
+    - _enrich_single_chunk(): 
+        a. Constructs a prompt using the base prompt + chunk text.
+        b. Calls the local LLM to generate a JSON response.
+        c. Uses regex to extract JSON from <output> tags.
+        d. Updates the chunk's metadata (topics, entities, summary, etc.) with LLM-generated values.
+    - Checkpointing: Saves enriched chunks to enriched_chunks.jsonl and progress to enrichment_state.json to allow resuming.
+5. VALIDATION:
+    - validate_before_indexing(): Performs structural, type, and "null poison" checks on the enriched dataset. Ensures at least 30% of chunks have been enriched.
+6. INDEXING:
+    - build_index(): 
+        a. Flattens metadata lists (topics/entities) into comma-separated strings for ChromaDB compatibility.
+        b. Encodes chunk text into vector embeddings using the loaded encoder.
+        c. Adds IDs, documents, metadata, and embeddings to the ChromaDB collection.
+7. MEMORY MANAGEMENT: Explicitly unloads models (unload_model/unload_llm) and calls gc.collect() to manage M3 Mac resources.
+"""
 import os
 import json
 import chromadb
@@ -5,22 +32,23 @@ import gc
 import re
 from pathlib import Path
 from sentence_transformers import SentenceTransformer
-from transformers import pipeline as transformers_pipeline
 from tools.scripture_chunker import ScriptureChunker
+from tools.book_author_mapper import BookAuthorMapper
 
 class IngestionPipeline:
     def __init__(self, db_path, model_dir):
-        self.db_path = db_path
-        self.model_dir = model_dir
-        self.client = chromadb.PersistentClient(path=db_path)
+        self.script_dir = Path(__file__).parent.absolute()
+        self.db_path = db_path if os.path.isabs(db_path) else str(self.script_dir / db_path)
+        self.model_dir = model_dir if os.path.isabs(model_dir) else str(self.script_dir / model_dir)
+        self.client = chromadb.PersistentClient(path=self.db_path)
         self.embed_model_name = "BAAI/bge-m3" 
         self.encoder = None
         self.llm = None
-        self.ner = None
+        self.author_mapper = BookAuthorMapper()
         
         # Paths
-        self.prompt_path = "/Users/gaura/scss/Attempt2/PROMPT.txt"
-        self.halted_log_path = "data/processed/halted_chunks.log"
+        self.prompt_path = str(self.script_dir / "PROMPT.txt")
+        self.halted_log_path = str(self.script_dir / "data/processed/halted_chunks.log")
         
         try:
             with open(self.prompt_path, 'r', encoding='utf-8') as f:
@@ -32,35 +60,22 @@ class IngestionPipeline:
         """Loads Embedding Model."""
         if self.encoder is None:
             local_path = os.path.join(self.model_dir, "Qwen3-Embedding-4B")
-            if not os.path.exists(local_path):
-                local_path = os.path.join(os.path.dirname(self.model_dir), "Attempt2", "models", "Qwen3-Embedding-4B")
+            
+            import torch
+            device = 'mps' if torch.backends.mps.is_available() else 'cpu'
             
             if os.path.exists(local_path):
-                print(f"Loading embedding model from local: {local_path}...")
-                self.encoder = SentenceTransformer(local_path, device='cpu', trust_remote_code=True)
+                print(f"Loading embedding model from local: {local_path} on {device}...")
+                self.encoder = SentenceTransformer(local_path, device=device, trust_remote_code=True)
             else:
-                print(f"Local model not found. Loading default: {self.embed_model_name}...")
-                self.encoder = SentenceTransformer(self.embed_model_name, device='cpu')
+                print(f"Local model not found at {local_path}. Loading default: {self.embed_model_name} on {device}...")
+                self.encoder = SentenceTransformer(self.embed_model_name, device=device)
 
     def unload_model(self):
         if self.encoder is not None:
             print("Unloading embedding model...")
             del self.encoder
             self.encoder = None
-            gc.collect()
-
-    def load_ner(self):
-        if self.ner is None:
-            ner_path = os.path.join(os.path.dirname(self.model_dir), "Attempt2", "models", "bert-large-NER")
-            if os.path.exists(ner_path):
-                print(f"Loading NER model...")
-                self.ner = transformers_pipeline("ner", model=ner_path, tokenizer=ner_path, aggregation_strategy="simple")
-
-    def unload_ner(self):
-        if self.ner is not None:
-            print("Unloading NER model...")
-            del self.ner
-            self.ner = None
             gc.collect()
 
     def load_llm(self):
@@ -103,9 +118,12 @@ class IngestionPipeline:
         return {"id": id, "text": text, "metadata": base_metadata}
 
     def ingest_songs(self, data_path):
+        from tools.song_chunker import SongChunker
+        chunker = SongChunker()
         chunks = []
         path = Path(data_path)
         if path.exists():
+            # Support both .json and .txt
             for file in path.glob("**/*.json"):
                 with open(file, 'r', encoding='utf-8') as f:
                     data = json.load(f)
@@ -122,6 +140,19 @@ class IngestionPipeline:
                         "first_line_sloka": ScriptureChunker.get_first_transliterated_line(verse)
                     }
                     chunks.append(self._create_gold_standard_chunk(chunk_id, combined_text, metadata))
+            
+            for file in path.glob("**/*.txt"):
+                song_chunks = chunker.chunk_song(str(file))
+                for sc in song_chunks:
+                    metadata = {
+                        "type": "song",
+                        "title": sc['metadata'].get('title'),
+                        "author": sc['metadata'].get('author'),
+                        "chunk_index": sc['metadata'].get('verse_number', 0),
+                        "has_sloka": True,
+                        "first_line_sloka": ScriptureChunker.get_first_transliterated_line(sc['text'])
+                    }
+                    chunks.append(self._create_gold_standard_chunk(sc['id'], sc['text'], metadata))
         return chunks
 
     def ingest_books(self, data_path):
@@ -132,6 +163,7 @@ class IngestionPipeline:
                 with open(file, 'r', encoding='utf-8') as f:
                     text = f.read()
                 book_id = file.stem
+                author = self.author_mapper.get_author(file.name)
                 if ScriptureChunker.is_scripture(file):
                     scripture_chunks = ScriptureChunker.generic_scripture_chunker(text, book_id)
                     for i, sc in enumerate(scripture_chunks):
@@ -139,6 +171,7 @@ class IngestionPipeline:
                         metadata = {
                             "book_id": book_id,
                             "title": book_id.replace("en-", ""),
+                            "author": author,
                             "chunk_index": i,
                             "type": sc['type'],
                             "has_sloka": True if sc['type'] == "verse+translation" else False,
@@ -146,18 +179,29 @@ class IngestionPipeline:
                         }
                         chunks.append(self._create_gold_standard_chunk(chunk_id, sc['text'], metadata))
                 else:
-                    metadata = {"book_id": book_id, "title": book_id.replace("en-", "")}
-                    chunks.append(self._create_gold_standard_chunk(book_id, text[:2000], metadata))
+                    # Proper chunking for normal books
+                    normal_chunks = ScriptureChunker.split_into_normal_chunks(text)
+                    for i, nc in enumerate(normal_chunks):
+                        chunk_id = f"{book_id}_chunk_{i}"
+                        metadata = {
+                            "book_id": book_id, 
+                            "title": book_id.replace("en-", ""),
+                            "author": author,
+                            "chunk_index": i,
+                            "type": "prose"
+                        }
+                        chunks.append(self._create_gold_standard_chunk(chunk_id, nc, metadata))
         return chunks
 
     def _enrich_single_chunk(self, chunk):
         """Helper to enrich one chunk. Detects LLM halting."""
-        if self.ner:
-            try:
-                ner_results = self.ner(chunk['text'][:1000])
-                entities = list(set([res['word'] for res in ner_results if res['score'] > 0.8]))
-                chunk['metadata']['entities'].extend(entities)
-            except Exception: pass
+        # NER disabled due to non-functionality
+        # if self.ner:
+        #     try:
+        #         ner_results = self.ner(chunk['text'][:1000])
+        #         entities = list(set([res['word'] for res in ner_results if res['score'] > 0.8]))
+        #         chunk['metadata']['entities'].extend(entities)
+        #     except Exception: pass
 
         # LLM pass with full text (no truncation)
         full_prompt = f"{self.base_prompt}\n\n<input>\n{chunk['text']}\n</input>"
@@ -187,7 +231,7 @@ class IngestionPipeline:
             chunk['metadata']['topics'] = list(set(chunk['metadata']['topics']))
             chunk['metadata']['source_ref'] = list(set(chunk['metadata']['source_ref']))
             
-            if enrichment.get('type'): chunk['metadata']['type'] = enrichment['type']
+            if enrichment.get('type') and chunk['metadata']['type'] is None: chunk['metadata']['type'] = enrichment['type']
             if enrichment.get('summary'): chunk['metadata']['summary'] = enrichment['summary']
             if 'has_sloka' in enrichment: chunk['metadata']['has_sloka'] = enrichment['has_sloka']
         except Exception as e:
@@ -253,7 +297,6 @@ class IngestionPipeline:
         if start_idx >= len(chunks):
             return self.load_enriched_chunks(checkpoint_file)
 
-        self.load_ner()
         self.load_llm()
         
         last_completed = start_idx - 1
@@ -271,7 +314,6 @@ class IngestionPipeline:
         finally:
             with open(state_file, 'w') as f:
                 json.dump({'last_completed_index': last_completed}, f)
-            self.unload_ner()
             self.unload_llm()
 
         return self.load_enriched_chunks(checkpoint_file)
@@ -294,14 +336,19 @@ class IngestionPipeline:
         metadatas = []
         for c in chunks:
             m = c['metadata'].copy()
-            # Just handle None values - keep lists as lists
+            # Flatten lists to comma-separated strings for Chroma compatibility
             for k, v in m.items():
-                if v is None: m[k] = ""
+                if isinstance(v, list):
+                    m[k] = ", ".join(map(str, v))
+                elif v is None:
+                    m[k] = ""
             metadatas.append(m)
         
         self.load_model()
         try:
-            embeddings = self.encoder.encode(documents).tolist()
+            print(f"Encoding {len(documents)} documents (batch_size=4)...")
+            embeddings = self.encoder.encode(documents, batch_size=4, show_progress_bar=True).tolist()
+            print("Encoding complete.")
         finally:
             self.unload_model()
         
