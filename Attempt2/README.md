@@ -60,6 +60,9 @@ This pipeline can be exposed as a **Model Context Protocol (MCP)** server, allow
    - **Command**: `/Users/gaura/scss/Attempt2/.venv/bin/python`
    - **Arguments**: `/Users/gaura/scss/Attempt2/mcp_server.py`
 
+### Setup in Claude Desktop:
+Add the server configuration to your `claude_desktop_config.json`. See `ATTEMPT2.md` for the full JSON snippet and file location.
+
 ## Requirements
 - `fastmcp`
 - `llama-index`

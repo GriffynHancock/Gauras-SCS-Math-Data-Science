@@ -92,7 +92,27 @@ Click **Add Server** and use the following configuration:
 - **Command:** `/Users/gaura/scss/Attempt2/.venv/bin/python`
 - **Arguments:** `/Users/gaura/scss/Attempt2/mcp_server.py`
 
-### 3. Usage
+### 3. Claude Desktop Setup
+To use this server with Claude Desktop, add the following configuration to your `claude_desktop_config.json` file:
+
+**Location:** `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows)
+
+```json
+{
+  "mcpServers": {
+    "GaudiyaRAG": {
+      "command": "/Users/gaura/scss/Attempt2/.venv/bin/python",
+      "args": [
+        "/Users/gaura/scss/Attempt2/mcp_server.py"
+      ]
+    }
+  }
+}
+```
+
+**Note:** You must restart Claude Desktop after saving this file.
+
+### 4. Usage
 Once connected, any model with tool-calling capabilities (e.g., GPT-4o, Claude 3.5, or a local model with tool support) will see the `gaudiya_rag_query` tool. You can ask questions like "Who is Mahaprabhu according to Sridhar Maharaj?" and the model will autonomously use the RAG tool to fetch the answer.
 
 ## Directory Structure
